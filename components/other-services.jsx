@@ -16,6 +16,11 @@ const otherProducts = [
     categorySoft: "var(--leaf-soft)",
     description:
       "A professional-grade 6,000 RPM juice extractor built with European precision engineering — delivering maximum yield, pulp-free juice to support daily nutrition and immune health.",
+    annotations: [
+      { icon: "leaf",   label: "Motor Speed",    value: "6,000 RPM" },
+      { icon: "shield", label: "Certified",      value: "UL · CSA approved" },
+    ],
+    ticker: { label: "JuiceMaster Pro", text: "Pulp-free nutrition · every morning" },
     features: [
       { title: "Patented 6,000 RPM Motor",     body: "Extracts maximum juice yield from fruits and vegetables with precision speed control for pulp-free results every time." },
       { title: "European Engineering",           body: "Built with precision European technology, UL approved and CSA certified for dependable, long-term home use." },
@@ -31,10 +36,16 @@ const otherProducts = [
     price: "From $1,200",
     category: "Water & Air",
     tone: "sea",
+    image: "uploads/CARICO_water-filtration_TREATMENT_SYSTEM_FROM_HEALTH_CRAFT_3cae2b5e-8fcc-455c-bced-6009f1219afd_1024x1024.webp",
     categoryColor: "var(--sea)",
     categorySoft: "var(--sea-soft)",
     description:
       "A versatile whole-home purification system available in five configurations — from compact point-of-use units to high-capacity whole-home systems — for cleaner air and water throughout your home.",
+    annotations: [
+      { icon: "filter", label: "Configurations", value: "5 system sizes" },
+      { icon: "shield", label: "Coverage",       value: "Whole Home 750" },
+    ],
+    ticker: { label: "Multi-Stage System", text: "From point-of-use to whole-home · From $1,200" },
     features: [
       { title: "Five Configuration Options",    body: "Choose from 10\", 15\", or 20\" point-of-use units, or step up to the Whole Home 500 or 750 for full-property coverage." },
       { title: "Removes Allergens & Particles", body: "Multi-stage filtration captures dust, pollen, pet dander, and airborne particulates before they circulate through your home." },
@@ -55,6 +66,11 @@ const otherProducts = [
     categorySoft: "var(--orange-soft)",
     description:
       "An orthopedic grounding sleep system with four adjustable comfort levels and Thermofresh Memory Foam — engineered for spinal alignment and year-round temperature comfort.",
+    annotations: [
+      { icon: "sparkle", label: "Comfort Levels", value: "4 adjustable settings" },
+      { icon: "sun",     label: "Technology",     value: "Thermofresh Memory Foam" },
+    ],
+    ticker: { label: "Sleep System Ultra Tech", text: "Spinal alignment · year-round comfort · $4,749" },
     features: [
       { title: "4 Adjustable Comfort Levels",   body: "The only orthopedic sleep system adjustable across four distinct settings, from firm support to plush comfort." },
       { title: "Thermofresh Memory Foam",        body: "Laser-cut, patented foam design adapts to your body's contours for optimal pressure relief and support." },
@@ -75,6 +91,11 @@ const otherProducts = [
     categorySoft: "#F5E4CC",
     description:
       "Premium 9-ply cookware crafted from 316Ti surgical stainless steel and titanium — featuring waterless vapor-seal cooking technology to lock in maximum nutrition and flavor.",
+    annotations: [
+      { icon: "sparkle", label: "Construction",  value: "9-ply titanium steel" },
+      { icon: "waves",   label: "Cook Method",   value: "Waterless vapor-seal" },
+    ],
+    ticker: { label: "Ultra Tech 2 Cookware", text: "23-piece set · surgical steel · $1,359" },
     features: [
       { title: "316Ti Surgical Steel + Titanium", body: "Nine-ply construction delivers even heat distribution across every surface for consistent, professional-grade results." },
       { title: "Waterless Vapor-Seal Cooking",   body: "The Ultra-Seal lid creates a vacuum that locks in moisture so food slow-cooks in its own natural juices." },
@@ -95,6 +116,11 @@ const otherProducts = [
     categorySoft: "var(--sea-soft)",
     description:
       "A premium multi-stage air purification system available in point-of-use and whole-home configurations — engineered to remove allergens, odors, VOCs, and airborne bacteria for a cleaner indoor environment.",
+    annotations: [
+      { icon: "filter", label: "Filtration",  value: "Multi-stage HEPA" },
+      { icon: "home",   label: "Coverage",    value: "Whole-home ready" },
+    ],
+    ticker: { label: "Deluxe Air Purifier", text: "5 configurations · allergen-free air · From $1,200" },
     features: [
       { title: "Removes Allergens & Particulates", body: "Captures dust, pollen, pet dander, and dust mite matter from the air before they circulate through your home." },
       { title: "Odor & VOC Elimination",           body: "Neutralizes cooking smells, household odors, and volatile organic compounds for noticeably fresher indoor air." },
@@ -221,6 +247,136 @@ const OtherServicesPage = () => (
   </>
 );
 
+// ─── Product hero visual (mirrors HeroVisual in hero.jsx) ──
+const ProductHeroVisual = ({ product }) => {
+  const [ann1, ann2] = product.annotations;
+  return (
+    <div style={{ position: "relative" }}>
+      <div style={{ position: "relative" }}>
+
+        {/* Main image container */}
+        <div style={{
+          aspectRatio: "4/5",
+          borderRadius: 24,
+          overflow: "hidden",
+          boxShadow: "var(--shadow-lg)",
+          position: "relative",
+          background: product.categorySoft,
+        }}>
+          <img
+            src={product.image}
+            alt={product.title}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              display: "block",
+            }}
+          />
+          {/* Subtle vignette to ground the floating UI */}
+          <div style={{
+            position: "absolute", inset: 0, pointerEvents: "none",
+            background: "linear-gradient(to bottom, transparent 55%, rgba(31,27,23,0.45) 100%)",
+          }} />
+        </div>
+
+        {/* Floating annotation — top left */}
+        <div className="hero-annotation">
+          <div style={{
+            position: "absolute", top: 36, left: -20,
+            background: "var(--paper)",
+            borderRadius: 14,
+            padding: "12px 14px",
+            boxShadow: "var(--shadow-md)",
+            border: "1px solid var(--rule)",
+            display: "flex", gap: 10, alignItems: "center",
+            minWidth: 200,
+          }}>
+            <div style={{
+              width: 38, height: 38, borderRadius: 10, flexShrink: 0,
+              background: product.categorySoft, color: product.categoryColor,
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>
+              <Icon name={ann1.icon} size={17} />
+            </div>
+            <div>
+              <div style={{ fontSize: 10, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>
+                {ann1.label}
+              </div>
+              <div style={{ fontFamily: "var(--f-display)", fontSize: 16, color: product.categoryColor }}>
+                {ann1.value}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Floating annotation — bottom right */}
+        <div className="hero-annotation">
+          <div style={{
+            position: "absolute", bottom: 106, right: -20,
+            background: "var(--paper)",
+            borderRadius: 14,
+            padding: "12px 14px",
+            boxShadow: "var(--shadow-md)",
+            border: "1px solid var(--rule)",
+            display: "flex", gap: 10, alignItems: "center",
+            minWidth: 210,
+          }}>
+            <div style={{
+              width: 38, height: 38, borderRadius: 10, flexShrink: 0,
+              background: product.categorySoft, color: product.categoryColor,
+              display: "flex", alignItems: "center", justifyContent: "center",
+            }}>
+              <Icon name={ann2.icon} size={17} />
+            </div>
+            <div>
+              <div style={{ fontSize: 10, color: "var(--ink-3)", fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase" }}>
+                {ann2.label}
+              </div>
+              <div style={{ fontFamily: "var(--f-display)", fontSize: 16 }}>
+                {ann2.value}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom ticker */}
+        <div style={{
+          position: "absolute", bottom: 20, left: 20, right: 20,
+          background: "rgba(31,27,23,0.86)",
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+          color: "var(--paper)",
+          padding: "13px 16px",
+          borderRadius: 14,
+          display: "flex", alignItems: "center", justifyContent: "space-between",
+          gap: 12,
+        }}>
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontSize: 10, letterSpacing: ".1em", opacity: .55, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>
+              {product.ticker.label}
+            </div>
+            <div style={{ fontFamily: "var(--f-display)", fontSize: 15, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              {product.ticker.text}
+            </div>
+          </div>
+          <a href="Book Free Water Test.html" style={{
+            flexShrink: 0,
+            padding: "7px 13px", borderRadius: 999,
+            background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
+            display: "inline-flex", alignItems: "center", gap: 5,
+            textDecoration: "none",
+          }}>
+            Enquire <Icon name="arrow-ne" size={11} />
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
 // ─── Shared product page template ─────────────────────────
 const ProductPageTemplate = ({ product }) => (
   <>
@@ -246,12 +402,9 @@ const ProductPageTemplate = ({ product }) => (
             <CategoryPill product={product} />
           </div>
 
-          <div style={{
-            display: "flex", gap: 64, alignItems: "flex-start",
-            flexWrap: "wrap",
-          }}>
+          <div className="grid-hero" style={{ alignItems: "center" }}>
             {/* Left: text */}
-            <div style={{ flex: "1 1 460px" }}>
+            <div>
               <h1 style={{ maxWidth: 760, marginBottom: 20 }}>
                 {product.title}
                 <span style={{ display: "block", fontStyle: "italic", color: product.categoryColor }}>
@@ -260,7 +413,7 @@ const ProductPageTemplate = ({ product }) => (
               </h1>
               <p style={{
                 fontSize: 19, color: "var(--ink-2)",
-                maxWidth: 580, lineHeight: 1.55, marginBottom: 36,
+                maxWidth: 520, lineHeight: 1.55, marginBottom: 36,
               }}>
                 {product.description}
               </p>
@@ -280,27 +433,8 @@ const ProductPageTemplate = ({ product }) => (
               </div>
             </div>
 
-            {/* Right: product image */}
-            <div style={{ flex: "0 0 auto" }}>
-              <div style={{
-                width: 280, height: 280,
-                borderRadius: 24,
-                overflow: "hidden",
-                background: product.categorySoft,
-                border: "1px solid var(--rule)",
-                boxShadow: "var(--shadow-md)",
-              }}>
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  style={{
-                    width: "100%", height: "100%",
-                    objectFit: "contain",
-                    padding: 16,
-                  }}
-                />
-              </div>
-            </div>
+            {/* Right: full hero visual */}
+            <ProductHeroVisual product={product} />
           </div>
         </div>
       </section>
