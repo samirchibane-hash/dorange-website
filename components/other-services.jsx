@@ -10,7 +10,8 @@ const otherProducts = [
     subtitle: "Juice Extractor",
     price: "$1,459",
     category: "Nutrition",
-    tone: "leaf",          // Placeholder tone
+    tone: "leaf",
+    image: "uploads/carico-juice-master-professional-oph4jepbp7tdgyrv0x3zuvnncjnn0efk2wcao06a8g.jpg",
     categoryColor: "var(--leaf)",
     categorySoft: "var(--leaf-soft)",
     description:
@@ -49,6 +50,7 @@ const otherProducts = [
     price: "$4,749",
     category: "Sleep & Wellness",
     tone: "orange",
+    image: "uploads/nihtsleep.png",
     categoryColor: "var(--orange)",
     categorySoft: "var(--orange-soft)",
     description:
@@ -68,6 +70,7 @@ const otherProducts = [
     price: "$1,359",
     category: "Healthy Cooking",
     tone: "warm",
+    image: "uploads/23-Piece-Ultra-Tech-2.feather.MASHER-1024x721.png",
     categoryColor: "var(--amber)",
     categorySoft: "#F5E4CC",
     description:
@@ -87,6 +90,7 @@ const otherProducts = [
     price: "From $1,200",
     category: "Air Quality",
     tone: "sea",
+    image: "uploads/air_con.png",
     categoryColor: "var(--sea)",
     categorySoft: "var(--sea-soft)",
     description:
@@ -276,15 +280,26 @@ const ProductPageTemplate = ({ product }) => (
               </div>
             </div>
 
-            {/* Right: visual placeholder */}
+            {/* Right: product image */}
             <div style={{ flex: "0 0 auto" }}>
-              <Placeholder
-                label={product.title}
-                aspect="1/1"
-                tone={product.tone}
-                rounded={24}
-                style={{ width: 220, height: 220 }}
-              />
+              <div style={{
+                width: 280, height: 280,
+                borderRadius: 24,
+                overflow: "hidden",
+                background: product.categorySoft,
+                border: "1px solid var(--rule)",
+                boxShadow: "var(--shadow-md)",
+              }}>
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  style={{
+                    width: "100%", height: "100%",
+                    objectFit: "contain",
+                    padding: 16,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
