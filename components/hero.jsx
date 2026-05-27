@@ -78,50 +78,19 @@ const HeroVisual = () => {
           aspectRatio: "4/5",
           borderRadius: 24,
           overflow: "hidden",
-          background: "linear-gradient(165deg, var(--orange-soft) 0%, var(--bg-2) 60%, var(--leaf-soft) 100%)",
-          boxShadow: "var(--shadow-md)",
+          boxShadow: "var(--shadow-lg)",
           position: "relative",
         }}>
-          {/* Sun */}
-          <div style={{
-            position: "absolute", top: -80, right: -80, width: 280, height: 280,
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(232,122,42,0.55), transparent 70%)",
-          }}/>
-          {/* Sliced orange decoration */}
-          <svg viewBox="0 0 400 500" style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }}>
-            {/* faint palm/leaf shapes */}
-            <g opacity="0.18">
-              <path d="M-20 480 Q 80 380 150 460 T 320 500 L -20 500 Z" fill="#5C9E3D"/>
-              <path d="M-20 480 Q 80 420 150 480 T 320 500 L -20 500 Z" fill="#3B7126"/>
-            </g>
-            {/* Big stylized orange slice */}
-            <g transform="translate(200 220)">
-              <circle r="120" fill="#FFFCF6" stroke="#E87A2A" strokeWidth="3"/>
-              <circle r="105" fill="none" stroke="#E87A2A" strokeWidth="1.4"/>
-              {/* segments */}
-              {Array.from({length: 10}).map((_, i) => {
-                const a = (i * 36 - 90) * Math.PI / 180;
-                return <line key={i} x1="0" y1="0" x2={Math.cos(a)*102} y2={Math.sin(a)*102}
-                  stroke="#E87A2A" strokeWidth="1.4"/>;
-              })}
-              {/* pulp dots */}
-              {Array.from({length: 30}).map((_, i) => {
-                const a = Math.random() * Math.PI * 2;
-                const r = 20 + Math.random() * 70;
-                return <circle key={i} cx={Math.cos(a)*r} cy={Math.sin(a)*r} r={0.8 + Math.random()*1.4} fill="#E87A2A" opacity="0.4"/>;
-              })}
-              <circle r="6" fill="#E87A2A"/>
-              {/* leaf */}
-              <path d="M-20 -120 q 10 -30 40 -30 q -5 25 -30 35Z" fill="#5C9E3D"/>
-            </g>
-            {/* Water droplets falling */}
-            {[80, 160, 240, 320].map((x, i) => (
-              <g key={x} style={{ animation: `drift ${3 + i * 0.4}s ease-in-out infinite` }}>
-                <path d={`M ${x} ${380 + i*8} q -6 10 0 18 q 6 -8 0 -18 Z`} fill="#2F86A6" opacity="0.7"/>
-              </g>
-            ))}
-          </svg>
+          <img
+            src="uploads/WhatsApp Image 2024-07-18 at 18.26.41.jpeg"
+            alt="D'Orange Services whole-home water filtration installation"
+            style={{
+              width: "100%", height: "100%",
+              objectFit: "cover",
+              objectPosition: "center",
+              display: "block",
+            }}
+          />
         </div>
 
         {/* Floating annotation 1 — hardness */}
