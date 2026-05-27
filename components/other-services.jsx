@@ -8,7 +8,6 @@ const otherProducts = [
     href: "JuiceMaster.html",
     title: "JuiceMaster",
     subtitle: "Juice Extractor",
-    price: "$1,459",
     category: "Nutrition",
     tone: "leaf",
     image: "uploads/carico-juice-master-professional-oph4jepbp7tdgyrv0x3zuvnncjnn0efk2wcao06a8g.jpg",
@@ -33,7 +32,6 @@ const otherProducts = [
     href: "Filtration Cartridge.html",
     title: "Multi-Stage Filtration System",
     subtitle: "Whole-Home Purification",
-    price: "From $1,200",
     category: "Water & Air",
     tone: "sea",
     image: "uploads/CARICO_water-filtration_TREATMENT_SYSTEM_FROM_HEALTH_CRAFT_3cae2b5e-8fcc-455c-bced-6009f1219afd_1024x1024.webp",
@@ -45,7 +43,7 @@ const otherProducts = [
       { icon: "filter", label: "Configurations", value: "5 system sizes" },
       { icon: "shield", label: "Coverage",       value: "Whole Home 750" },
     ],
-    ticker: { label: "Multi-Stage System", text: "From point-of-use to whole-home · From $1,200" },
+    ticker: { label: "Multi-Stage System", text: "From point-of-use to whole-home coverage" },
     features: [
       { title: "Five Configuration Options",    body: "Choose from 10\", 15\", or 20\" point-of-use units, or step up to the Whole Home 500 or 750 for full-property coverage." },
       { title: "Removes Allergens & Particles", body: "Multi-stage filtration captures dust, pollen, pet dander, and airborne particulates before they circulate through your home." },
@@ -58,7 +56,6 @@ const otherProducts = [
     href: "Grounding Sleep System.html",
     title: "Sleep System Ultra Tech",
     subtitle: "Platinum Grounding Mattress",
-    price: "$4,749",
     category: "Sleep & Wellness",
     tone: "orange",
     image: "uploads/nihtsleep.png",
@@ -70,7 +67,7 @@ const otherProducts = [
       { icon: "sparkle", label: "Comfort Levels", value: "4 adjustable settings" },
       { icon: "sun",     label: "Technology",     value: "Thermofresh Memory Foam" },
     ],
-    ticker: { label: "Sleep System Ultra Tech", text: "Spinal alignment · year-round comfort · $4,749" },
+    ticker: { label: "Sleep System Ultra Tech", text: "Spinal alignment · year-round comfort" },
     features: [
       { title: "4 Adjustable Comfort Levels",   body: "The only orthopedic sleep system adjustable across four distinct settings, from firm support to plush comfort." },
       { title: "Thermofresh Memory Foam",        body: "Laser-cut, patented foam design adapts to your body's contours for optimal pressure relief and support." },
@@ -83,7 +80,6 @@ const otherProducts = [
     href: "Ultra Tech Cookware.html",
     title: "Ultra Tech 2 Cookware",
     subtitle: "9-Ply Surgical Steel Set",
-    price: "$1,359",
     category: "Healthy Cooking",
     tone: "warm",
     image: "uploads/23-Piece-Ultra-Tech-2.feather.MASHER-1024x721.png",
@@ -95,7 +91,7 @@ const otherProducts = [
       { icon: "sparkle", label: "Construction",  value: "9-ply titanium steel" },
       { icon: "waves",   label: "Cook Method",   value: "Waterless vapor-seal" },
     ],
-    ticker: { label: "Ultra Tech 2 Cookware", text: "23-piece set · surgical steel · $1,359" },
+    ticker: { label: "Ultra Tech 2 Cookware", text: "23-piece set · surgical steel" },
     features: [
       { title: "316Ti Surgical Steel + Titanium", body: "Nine-ply construction delivers even heat distribution across every surface for consistent, professional-grade results." },
       { title: "Waterless Vapor-Seal Cooking",   body: "The Ultra-Seal lid creates a vacuum that locks in moisture so food slow-cooks in its own natural juices." },
@@ -108,7 +104,6 @@ const otherProducts = [
     href: "Air Purifier.html",
     title: "Deluxe Air Purifier",
     subtitle: "Whole-Home Air Purification",
-    price: "From $1,200",
     category: "Air Quality",
     tone: "sea",
     image: "uploads/air_con.png",
@@ -120,7 +115,7 @@ const otherProducts = [
       { icon: "filter", label: "Filtration",  value: "Multi-stage HEPA" },
       { icon: "home",   label: "Coverage",    value: "Whole-home ready" },
     ],
-    ticker: { label: "Deluxe Air Purifier", text: "5 configurations · allergen-free air · From $1,200" },
+    ticker: { label: "Deluxe Air Purifier", text: "5 configurations · allergen-free air" },
     features: [
       { title: "Removes Allergens & Particulates", body: "Captures dust, pollen, pet dander, and dust mite matter from the air before they circulate through your home." },
       { title: "Odor & VOC Elimination",           body: "Neutralizes cooking smells, household odors, and volatile organic compounds for noticeably fresher indoor air." },
@@ -215,15 +210,9 @@ const OtherServicesPage = () => (
                   </div>
 
                   <div style={{
-                    display: "flex", alignItems: "center", justifyContent: "space-between",
+                    display: "flex", alignItems: "center", justifyContent: "flex-end",
                     paddingTop: 24, marginTop: 24, borderTop: "1px solid var(--rule)",
                   }}>
-                    <div style={{
-                      fontFamily: "var(--f-display)", fontSize: 22,
-                      letterSpacing: "-0.02em", color: "var(--ink)",
-                    }}>
-                      {p.price}
-                    </div>
                     <span style={{
                       display: "inline-flex", alignItems: "center", gap: 6,
                       fontSize: 14, fontWeight: 500, color: p.categoryColor,
@@ -418,12 +407,6 @@ const ProductPageTemplate = ({ product }) => (
                 {product.description}
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-                <div style={{
-                  fontFamily: "var(--f-display)", fontSize: 30,
-                  letterSpacing: "-0.02em", color: "var(--ink)",
-                }}>
-                  {product.price}
-                </div>
                 <a href="Book Free Water Test.html" className="btn btn-primary">
                   Enquire now <Icon name="arrow" size={14} />
                 </a>
