@@ -79,6 +79,25 @@ const otherProducts = [
       { title: "All-Stovetop Compatible",         body: "Works with induction, gas, and electric. Heat-resistant silicone handles rated to 375°F. Backed by lifetime warranty." },
     ],
   },
+  {
+    id: "air-purifier",
+    href: "Air Purifier.html",
+    title: "Deluxe Air Purifier",
+    subtitle: "Whole-Home Air Purification",
+    price: "From $1,200",
+    category: "Air Quality",
+    tone: "sea",
+    categoryColor: "var(--sea)",
+    categorySoft: "var(--sea-soft)",
+    description:
+      "A premium multi-stage air purification system available in point-of-use and whole-home configurations — engineered to remove allergens, odors, VOCs, and airborne bacteria for a cleaner indoor environment.",
+    features: [
+      { title: "Removes Allergens & Particulates", body: "Captures dust, pollen, pet dander, and dust mite matter from the air before they circulate through your home." },
+      { title: "Odor & VOC Elimination",           body: "Neutralizes cooking smells, household odors, and volatile organic compounds for noticeably fresher indoor air." },
+      { title: "Bacteria & Pathogen Reduction",    body: "Multi-stage filtration targets airborne bacteria and harmful toxins, reducing your family's exposure to indoor pollutants." },
+      { title: "Five Configuration Options",       body: "Available in 10\", 15\", and 20\" point-of-use units plus Whole Home 500 and 750 configurations for full-property coverage." },
+    ],
+  },
 ];
 
 // ─── Category pill ─────────────────────────────────────────
@@ -343,11 +362,12 @@ const ProductPageTemplate = ({ product }) => (
 );
 
 // ─── Individual page exports ───────────────────────────────
-const OtherServicesHubPage  = OtherServicesPage;
-const JuiceMasterPage       = () => <ProductPageTemplate product={otherProducts[0]} />;
+const OtherServicesHubPage    = OtherServicesPage;
+const JuiceMasterPage         = () => <ProductPageTemplate product={otherProducts[0]} />;
 const FiltrationCartridgePage = () => <ProductPageTemplate product={otherProducts[1]} />;
-const GroundingMattressPage = () => <ProductPageTemplate product={otherProducts[2]} />;
-const UltraTechCookwarePage = () => <ProductPageTemplate product={otherProducts[3]} />;
+const GroundingMattressPage   = () => <ProductPageTemplate product={otherProducts[2]} />;
+const UltraTechCookwarePage   = () => <ProductPageTemplate product={otherProducts[3]} />;
+const AirPurifierPage         = () => <ProductPageTemplate product={otherProducts[4]} />;
 
 Object.assign(window, {
   OtherServicesHubPage,
@@ -355,4 +375,5 @@ Object.assign(window, {
   FiltrationCartridgePage,
   GroundingMattressPage,
   UltraTechCookwarePage,
+  AirPurifierPage,
 });
