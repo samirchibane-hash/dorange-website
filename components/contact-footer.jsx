@@ -192,18 +192,25 @@ const Footer = () => {
   const cols = [
     { title: "Solutions", links: [
       { l: "Whole-Home Filtration System", href: "Whole Home System.html" },
+      { l: "Other Services",               href: "Other Services.html" },
+      { l: "JuiceMaster",                  href: "JuiceMaster.html" },
+      { l: "Deluxe Air Purifier",          href: "Air Purifier.html" },
+      { l: "Sleep System Ultra Tech",      href: "Grounding Sleep System.html" },
+      { l: "Ultra Tech 2 Cookware",        href: "Ultra Tech Cookware.html" },
+      { l: "Multi-Stage Filtration",       href: "Filtration Cartridge.html" },
     ] },
     { title: "Company", links: [
-      { l: "About", href: "About.html" },
-      { l: "How it works", href: "How It Works.html" },
+      { l: "About",                href: "About.html" },
+      { l: "How it works",        href: "How It Works.html" },
       { l: "Book free water test", href: "Book Free Water Test.html" },
     ] },
     { title: "Service areas", links: [
-      { l: "Naples" }, { l: "Bonita Springs" }, { l: "Marco Island" },
-      { l: "Estero" }, { l: "Fort Myers" }, { l: "Cape Coral" },
-    ] },
-    { title: "Resources", links: [
-      { l: "Water test reports" }, { l: "Warranty" }, { l: "Financing" }, { l: "Customer portal" },
+      { l: "Naples",         href: "naples-water-treatment.html" },
+      { l: "Bonita Springs", href: "bonita-springs-water-treatment.html" },
+      { l: "Marco Island",   href: "marco-island-water-treatment.html" },
+      { l: "Estero",         href: "estero-water-treatment.html" },
+      { l: "Fort Myers",     href: "fort-myers-water-treatment.html" },
+      { l: "Cape Coral",     href: "cape-coral-water-treatment.html" },
     ] },
   ];
   return (
