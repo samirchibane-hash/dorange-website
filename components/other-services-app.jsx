@@ -2,7 +2,7 @@
 // Shared by all five Other Services HTML files
 
 (function () {
-  const path = window.location.pathname;
+  const path = decodeURIComponent(window.location.pathname);
   let Page;
 
   if      (path.includes("JuiceMaster"))          Page = JuiceMasterPage;
