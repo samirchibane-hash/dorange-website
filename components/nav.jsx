@@ -21,6 +21,12 @@ const Nav = () => {
       { label: "Whole-Home Filtration System", href: "Whole Home System.html", sub: "Our flagship 4-stage system" },
     ] },
     { label: "How it works", href: "How It Works.html", items: null },
+    { label: "Other Services", items: [
+      { label: "JuiceMaster Juice Extractor",      href: "JuiceMaster.html",            sub: "6,000 RPM · European engineering" },
+      { label: "Multi-Stage Filtration System",    href: "Filtration Cartridge.html",   sub: "Whole-home purification · from $1,200" },
+      { label: "Sleep System Ultra Tech",          href: "Grounding Sleep System.html", sub: "Orthopedic grounding mattress" },
+      { label: "Ultra Tech 2 Cookware",            href: "Ultra Tech Cookware.html",    sub: "316Ti surgical steel · waterless cooking" },
+    ] },
     { label: "Service areas", items: ["Naples", "Bonita Springs", "Marco Island", "Estero", "Fort Myers", "Cape Coral"] },
     { label: "About", href: "About.html", items: null },
   ];
