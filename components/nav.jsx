@@ -22,10 +22,9 @@ const Nav = () => {
     ] },
     { label: "How it works", href: "How It Works.html", items: null },
     { label: "Other Services", items: [
-      { label: "JuiceMaster Juice Extractor",   href: "JuiceMaster.html" },
-      { label: "Multi-Stage Filtration System", href: "Filtration Cartridge.html" },
-      { label: "Sleep System Ultra Tech",       href: "Grounding Sleep System.html" },
-      { label: "Ultra Tech 2 Cookware",         href: "Ultra Tech Cookware.html" },
+      { label: "JuiceMaster Juice Extractor", href: "JuiceMaster.html" },
+      { label: "Sleep System Ultra Tech",     href: "Grounding Sleep System.html" },
+      { label: "Ultra Tech 2 Cookware",       href: "Ultra Tech Cookware.html" },
     ] },
     { label: "Service areas", items: [
       { label: "Naples",         href: "naples-water-treatment.html" },
