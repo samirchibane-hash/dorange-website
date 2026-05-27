@@ -27,7 +27,14 @@ const Nav = () => {
       { label: "Sleep System Ultra Tech",          href: "Grounding Sleep System.html", sub: "Orthopedic grounding mattress" },
       { label: "Ultra Tech 2 Cookware",            href: "Ultra Tech Cookware.html",    sub: "316Ti surgical steel · waterless cooking" },
     ] },
-    { label: "Service areas", items: ["Naples", "Bonita Springs", "Marco Island", "Estero", "Fort Myers", "Cape Coral"] },
+    { label: "Service areas", items: [
+      { label: "Naples",         href: "naples-water-treatment.html",         sub: "Collier County" },
+      { label: "Bonita Springs", href: "bonita-springs-water-treatment.html", sub: "Lee / Collier County" },
+      { label: "Marco Island",   href: "marco-island-water-treatment.html",   sub: "Collier County" },
+      { label: "Estero",         href: "estero-water-treatment.html",         sub: "Lee County" },
+      { label: "Fort Myers",     href: "fort-myers-water-treatment.html",     sub: "Lee County" },
+      { label: "Cape Coral",     href: "cape-coral-water-treatment.html",     sub: "Lee County" },
+    ] },
     { label: "About", href: "About.html", items: null },
   ];
 
@@ -76,7 +83,7 @@ const Nav = () => {
                       position: "absolute", top: "100%", left: 0,
                       background: "var(--paper)", borderRadius: 14, padding: 8,
                       border: "1px solid var(--rule)", boxShadow: "var(--shadow-md)",
-                      minWidth: l.label === "Solutions" ? 320 : 200,
+                      minWidth: ["Solutions", "Other Services", "Service areas"].includes(l.label) ? 320 : 200,
                     }}>
                       {l.items.map(it => {
                         const label = typeof it === "string" ? it : it.label;
