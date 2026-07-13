@@ -57,7 +57,7 @@ const citiesData = [
       },
       {
         q: "Do I need a water softener in Naples, FL?",
-        a: "Most Naples homeowners get better results from a salt-free conditioning system than a traditional salt softener. Salt-based softeners swap calcium for sodium, which creates its own taste and plumbing issues. Our 4-stage whole-home system conditions hardness and removes chlorine without any salt or ongoing chemical costs.",
+        a: "Most Naples homeowners get better results from a salt-free conditioning system than a traditional salt softener. Salt-based softeners swap calcium for sodium, which creates its own taste and plumbing issues. Our whole-home systems condition hardness and remove chlorine without any salt or ongoing chemical costs.",
       },
       {
         q: "Why does my Naples water smell like rotten eggs?",
@@ -565,29 +565,29 @@ const CityLandingPage = ({ city }) => (
             <div style={{ flex: "1 1 400px" }}>
               <div className="eyebrow" style={{ marginBottom: 16 }}>// The fix</div>
               <h2 style={{ marginBottom: 20, maxWidth: 520 }}>
-                One system.<br />
+                The right system,<br />
                 <span style={{ fontStyle: "italic", color: "var(--orange)" }}>
-                  Every problem solved.
+                  tailored to your home.
                 </span>
               </h2>
               <p style={{ fontSize: 17, color: "var(--ink-2)", lineHeight: 1.65, maxWidth: 520 }}>
-                Our 4-stage whole-home filtration system is configured to your specific water profile
-                — not a one-size-fits-all product. It handles hardness, chlorine or chloramines, TDS,
-                and odor simultaneously, from the moment water enters your home.
+                Depending on what you&apos;d like to improve, we fit your {city.name} home with a
+                point-of-entry system that treats water for the whole house, or a point-of-use system
+                for a single tap — matched to your water and installed by certified local techs.
               </p>
               <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
                 <a href="Book Free Water Test.html" className="btn btn-primary">
                   Book a free water test <Icon name="arrow" size={14} />
                 </a>
                 <a href="Whole Home System.html" className="btn btn-ghost btn-sm" style={{ alignSelf: "center" }}>
-                  See the system
+                  See water systems
                 </a>
               </div>
             </div>
 
             <div style={{ display: "flex", flexDirection: "column", gap: 12, flex: "0 0 auto" }}>
               {[
-                { n: "4",       l: "filtration stages" },
+                { n: "2",       l: "point-of-use & point-of-entry options" },
                 { n: "Free",    l: "in-home water test" },
                 { n: "Life",    l: "time warranty" },
                 { n: "Same-wk", l: "scheduling" },
