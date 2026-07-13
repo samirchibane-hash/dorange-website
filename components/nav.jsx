@@ -17,9 +17,7 @@ const Nav = () => {
   }, [mobileOpen]);
 
   const links = [
-    { label: "Solutions", items: [
-      { label: "Whole-Home Filtration System", href: "Whole Home System.html", sub: "Our flagship 4-stage system" },
-    ] },
+    { label: "Water Systems", href: "Whole Home System.html", items: null },
     { label: "How it works", href: "How It Works.html", items: null },
     { label: "Other Services", items: [
       { label: "JuiceMaster Juice Extractor", href: "JuiceMaster.html" },

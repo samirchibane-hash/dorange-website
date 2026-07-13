@@ -10,7 +10,7 @@ const WHSHero = () => (
     <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Solutions</a>
+          <a href="Whole Home System.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Water Systems</a>
           <span style={{ color: "var(--ink-4)" }}>/</span>
           <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Whole-Home Filtration System</span>
         </div>
