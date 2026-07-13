@@ -3,15 +3,11 @@ const HomeApp = () => (
   <>
     <Nav />
     <main>
-      <Hero />
-      <hr className="rule" />
-      <ValueProps />
-      <Process />
-      <LifeWithIt />
-      <ServiceMap />
+      <HomeHero />
+      <HomeCategories />
+      <BestSellers />
+      <FreeTestBanner />
       <Testimonials />
-      <FAQ />
-      <Contact />
     </main>
     <Footer />
   </>

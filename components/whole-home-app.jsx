@@ -5,11 +5,8 @@ const WholeHomeApp = () => (
     <main>
       <WHSHero />
       <WHSStages />
-      <WHSSizes />
       <WHSEngineered />
       <WHSBenefits />
-      <WHSCompare />
-      <WHSSpecs />
       <WHSFaq />
       <WHSCta />
     </main>
