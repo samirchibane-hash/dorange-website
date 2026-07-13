@@ -17,6 +17,7 @@ const Nav = () => {
   }, [mobileOpen]);
 
   const links = [
+    { label: "Home", href: "index.html", items: null },
     { label: "Water Systems", href: "Whole Home System.html", items: null },
     { label: "Water Test", href: "How It Works.html", items: null },
     { label: "Other Services", items: [
