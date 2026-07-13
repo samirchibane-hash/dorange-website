@@ -43,7 +43,7 @@ const Nav = () => {
       <header style={{
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
         transition: "all .3s ease",
-        background: scrolled ? "rgba(250,246,238,0.88)" : "transparent",
+        background: scrolled ? "rgba(255,255,255,0.88)" : "transparent",
         backdropFilter: scrolled ? "saturate(160%) blur(16px)" : "none",
         WebkitBackdropFilter: scrolled ? "saturate(160%) blur(16px)" : "none",
         borderBottom: scrolled ? "1px solid var(--rule)" : "1px solid transparent",
@@ -52,11 +52,8 @@ const Nav = () => {
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "14px 0",
         }}>
-          <a href="index.html" style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <LogoMark size={42} />
-            <span style={{ fontFamily: "var(--f-display)", fontSize: 20, letterSpacing: "-0.01em", lineHeight: 1.05 }}>
-              D&apos;Orange <span style={{ fontStyle: "italic", color: "var(--orange)" }}>Services</span>
-            </span>
+          <a href="index.html" style={{ display: "flex", alignItems: "center" }} aria-label="D'Orange Services — home">
+            <img src="assets/logo.png" alt="D'Orange Services" style={{ height: 40, width: "auto", display: "block" }} />
           </a>
 
           {/* Desktop nav */}

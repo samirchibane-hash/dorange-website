@@ -210,12 +210,12 @@ const ServiceMap = () => {
       <div className="container-wide" style={{ position: "relative" }}>
         <div className="grid-sidebar">
           <div>
-            <div className="eyebrow" style={{ marginBottom: 16, color: "rgba(250,246,238,0.55)" }}>// Service areas</div>
+            <div className="eyebrow" style={{ marginBottom: 16, color: "rgba(255,255,255,0.55)" }}>// Service areas</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 20 }}>
               Collier &amp; Lee counties.<br/>
               <span style={{ fontStyle: "italic", color: "var(--orange)" }}>Same-week installs.</span>
             </h2>
-            <p style={{ color: "rgba(250,246,238,0.75)", maxWidth: 380, marginBottom: 28 }}>
+            <p style={{ color: "rgba(255,255,255,0.75)", maxWidth: 380, marginBottom: 28 }}>
               We&apos;re based in Naples and we service everywhere our trucks can reach in a workday.
               If you&apos;re close to the Gulf, we&apos;re close to you.
             </p>
@@ -225,7 +225,7 @@ const ServiceMap = () => {
           </div>
           <div style={{
             display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1,
-            background: "rgba(250,246,238,0.12)", borderRadius: 18, overflow: "hidden",
+            background: "rgba(255,255,255,0.12)", borderRadius: 18, overflow: "hidden",
           }}>
             {cities.map((c, i) => (
               <div key={c.n} style={{
@@ -233,7 +233,7 @@ const ServiceMap = () => {
                 display: "flex", flexDirection: "column", justifyContent: "space-between",
                 minHeight: 110,
               }}>
-                <span className="kbd-num" style={{ color: "rgba(250,246,238,0.5)" }}>{String(i + 1).padStart(2, "0")}</span>
+                <span className="kbd-num" style={{ color: "rgba(255,255,255,0.5)" }}>{String(i + 1).padStart(2, "0")}</span>
                 <div>
                   <div style={{ fontFamily: "var(--f-display)", fontSize: 20, color: "var(--paper)" }}>{c.n}</div>
                   {c.note && <div style={{ fontSize: 11, fontFamily: "var(--f-mono)", color: "var(--orange)", marginTop: 4, letterSpacing: ".1em" }}>● {c.note}</div>}

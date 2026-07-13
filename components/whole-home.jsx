@@ -65,155 +65,38 @@ const WHSHero = () => (
 );
 
 const WHSDeviceVisual = () => (
-  <div style={{ position: "relative", display: "flex", justifyContent: "center", alignItems: "center", minHeight: 680 }}>
-    {/* concentric rings */}
+  <div style={{ position: "relative" }}>
+    {/* Clean product photo card — replaces the old animated tank cutaway. */}
     <div style={{
-      position: "absolute", width: 460, height: 460, borderRadius: "50%",
-      border: "1px dashed var(--rule)",
-    }}/>
-    <div style={{
-      position: "absolute", width: 580, height: 580, borderRadius: "50%",
-      border: "1px dashed var(--rule)", opacity: .5,
-    }}/>
-    <div style={{
-      position: "absolute", width: 380, height: 380, borderRadius: "50%",
-      background: "radial-gradient(circle, var(--orange-soft), transparent 70%)",
-      opacity: .9,
-    }}/>
-
-    {/* Original SVG illustration of the system */}
-    <svg viewBox="0 0 280 640" style={{
-      height: 640, width: "auto", position: "relative", zIndex: 2,
-      filter: "drop-shadow(0 30px 50px rgba(31,27,23,.18))",
+      aspectRatio: "4/5", borderRadius: 24, overflow: "hidden",
+      boxShadow: "var(--shadow-lg)", position: "relative",
+      background: "radial-gradient(120% 100% at 50% 0%, var(--bg-2), #FFFFFF 72%)",
+      padding: 36, display: "flex", alignItems: "center", justifyContent: "center",
     }}>
-      <defs>
-        <linearGradient id="bigJacket" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#7a7a7a"/>
-          <stop offset="15%" stopColor="#cfcfcf"/>
-          <stop offset="35%" stopColor="#f4f4f4"/>
-          <stop offset="55%" stopColor="#dcdcdc"/>
-          <stop offset="80%" stopColor="#9c9c9c"/>
-          <stop offset="100%" stopColor="#5a5a5a"/>
-        </linearGradient>
-        <linearGradient id="bigCap" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#2a2620"/>
-          <stop offset="100%" stopColor="#1F1B17"/>
-        </linearGradient>
-        <clipPath id="cutaway">
-          <rect x="140" y="120" width="84" height="380"/>
-        </clipPath>
-      </defs>
-
-      {/* top valve cap */}
-      <rect x="60" y="30" width="160" height="44" rx="10" fill="url(#bigCap)"/>
-      <rect x="86" y="14" width="108" height="22" rx="6" fill="#2a2620"/>
-      <circle cx="140" cy="25" r="4" fill="#E87A2A"/>
-      {/* IN / OUT ports */}
-      <rect x="40" y="40" width="22" height="14" rx="3" fill="#2a2620"/>
-      <rect x="218" y="40" width="22" height="14" rx="3" fill="#2a2620"/>
-
-      {/* tank body — stainless jacket */}
-      <rect x="40" y="74" width="200" height="520" rx="14" fill="url(#bigJacket)" stroke="#5a5a5a" strokeWidth="0.6"/>
-
-      {/* subtle vertical highlight */}
-      <rect x="62" y="80" width="6" height="500" rx="3" fill="rgba(255,255,255,0.4)"/>
-
-      {/* base ring */}
-      <rect x="50" y="582" width="180" height="30" rx="8" fill="#1F1B17"/>
-      <rect x="56" y="606" width="168" height="14" rx="4" fill="#0a0907"/>
-
-      {/* Brand band */}
-      <rect x="64" y="250" width="152" height="110" fill="#1F1B17" opacity="0.92"/>
-      <text x="140" y="288" textAnchor="middle" fontSize="16" fill="#FAF6EE" fontFamily="Fraunces" fontStyle="italic">D&apos;Orange</text>
-      <text x="140" y="318" textAnchor="middle" fontSize="10" fill="#E87A2A" fontFamily="JetBrains Mono" letterSpacing="2">WHOLE-HOME</text>
-      <text x="140" y="338" textAnchor="middle" fontSize="9" fill="rgba(250,246,238,0.6)" fontFamily="JetBrains Mono">FILTRATION SYSTEM</text>
-
-      {/* Cutaway window showing the 4 layers */}
-      <g clipPath="url(#cutaway)">
-        {/* glass background of cutaway */}
-        <rect x="140" y="120" width="84" height="380" fill="#FAF6EE"/>
-        {/* layer 1: KDF (dark) */}
-        <rect x="140" y="120" width="84" height="95" fill="#2A2620"/>
-        {[...Array(20)].map((_, j) => (
-          <circle key={`a${j}`}
-            cx={148 + (j % 5) * 16 + (Math.floor(j / 5) % 2) * 8}
-            cy={130 + Math.floor(j / 5) * 22}
-            r="2" fill="rgba(255,255,255,0.32)" />
-        ))}
-        {/* layer 2: Ultra Blend (deep ink) */}
-        <rect x="140" y="215" width="84" height="95" fill="#1F1B17"/>
-        {[...Array(20)].map((_, j) => (
-          <circle key={`b${j}`}
-            cx={148 + (j % 5) * 16 + (Math.floor(j / 5) % 2) * 8}
-            cy={225 + Math.floor(j / 5) * 22}
-            r="1.8" fill="rgba(255,255,255,0.28)" />
-        ))}
-        {/* layer 3: Garnet */}
-        <rect x="140" y="310" width="84" height="95" fill="#7A2A1A"/>
-        {[...Array(28)].map((_, j) => (
-          <circle key={`c${j}`}
-            cx={146 + (j % 6) * 14 + (Math.floor(j / 6) % 2) * 7}
-            cy={320 + Math.floor(j / 6) * 18}
-            r="1.6" fill="rgba(255,200,180,0.35)" />
-        ))}
-        {/* layer 4: Magnetic field / orange */}
-        <rect x="140" y="405" width="84" height="95" fill="#E87A2A"/>
-        {/* magnetic field lines */}
-        {[0, 1, 2, 3].map(i => (
-          <path key={`m${i}`}
-            d={`M 144 ${420 + i * 22} Q 182 ${410 + i * 22} 220 ${420 + i * 22}`}
-            stroke="rgba(255,255,255,0.4)" strokeWidth="1" fill="none"/>
-        ))}
-        {/* upward arrows showing flow */}
-        {[0, 1, 2, 3].map(i => (
-          <g key={`arrow${i}`} opacity="0.55">
-            <path d={`M ${165 + i * 18} 130 L ${165 + i * 18} 490`}
-              stroke="#3aa7d1" strokeWidth="1.2" strokeDasharray="2 4" fill="none"/>
-            <polygon points={`${165 + i * 18 - 3},132 ${165 + i * 18 + 3},132 ${165 + i * 18},126`}
-              fill="#3aa7d1"/>
-          </g>
-        ))}
-      </g>
-
-      {/* cutaway window frame */}
-      <rect x="140" y="120" width="84" height="380" fill="none" stroke="#2a2620" strokeWidth="1" strokeDasharray="3 3" opacity="0.6"/>
-
-      {/* "cut" indicator label */}
-      <text x="182" y="115" textAnchor="middle" fontSize="8" fill="#6B6259" fontFamily="JetBrains Mono" letterSpacing="1">CUTAWAY</text>
-
-      {/* Decorative pressure gauge */}
-      <circle cx="100" cy="450" r="16" fill="#1F1B17"/>
-      <circle cx="100" cy="450" r="13" fill="#FAF6EE"/>
-      <line x1="100" y1="450" x2="108" y2="442" stroke="#E87A2A" strokeWidth="1.5" strokeLinecap="round"/>
-      <circle cx="100" cy="450" r="1.4" fill="#1F1B17"/>
-    </svg>
-
-    <div style={{
-      position: "absolute", top: 60, right: -10, zIndex: 3,
-      background: "var(--ink)", color: "var(--paper)",
-      padding: "10px 14px", borderRadius: 12, boxShadow: "var(--shadow-md)",
-    }}>
-      <div className="kbd-num" style={{ fontSize: 10, color: "rgba(250,246,238,0.6)" }}>BACKWASHING</div>
-      <div style={{ fontSize: 13, marginTop: 4, fontFamily: "var(--f-display)" }}>Self-cleaning, no pre-filter</div>
+      <img
+        src="uploads/carico-tanks.png"
+        alt="D'Orange whole-home water filtration system — stainless steel tanks"
+        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }}
+      />
     </div>
 
-    <div style={{
-      position: "absolute", top: 240, left: -10, zIndex: 3,
-      background: "var(--paper)", padding: "10px 14px", borderRadius: 12,
-      border: "1px solid var(--rule)", boxShadow: "var(--shadow-md)", maxWidth: 200,
+    {/* Single static callout — no motion, on-theme */}
+    <div className="hero-annotation"><div style={{
+      position: "absolute", bottom: 24, left: -24, zIndex: 3,
+      background: "var(--paper)", borderRadius: 14, padding: "14px 16px",
+      boxShadow: "var(--shadow-md)", border: "1px solid var(--rule)",
+      display: "flex", gap: 12, alignItems: "center", minWidth: 230,
     }}>
-      <div className="kbd-num" style={{ fontSize: 10 }}>COMPOSITE TANK</div>
-      <div style={{ fontSize: 13, marginTop: 4, fontFamily: "var(--f-display)" }}>Lightweight · high performance</div>
-    </div>
-
-    <div style={{
-      position: "absolute", bottom: 110, right: -10, zIndex: 3,
-      background: "var(--paper)", padding: "10px 14px", borderRadius: 12,
-      border: "1px solid var(--rule)", boxShadow: "var(--shadow-md)", maxWidth: 220,
-    }}>
-      <div className="kbd-num" style={{ fontSize: 10 }}>4 STAGES STACKED</div>
-      <div style={{ fontSize: 13, marginTop: 4, fontFamily: "var(--f-display)" }}>KDF · Ultra Blend · Garnet · Magnetic</div>
-    </div>
+      <div style={{
+        width: 42, height: 42, borderRadius: 10,
+        background: "var(--sea-soft)", color: "var(--sea)",
+        display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+      }}><Icon name="drop" size={20} /></div>
+      <div>
+        <div className="kbd-num">4-STAGE · SALT-FREE</div>
+        <div style={{ fontFamily: "var(--f-display)", fontSize: 16, fontWeight: 600, lineHeight: 1.2 }}>Whole-home filtration</div>
+      </div>
+    </div></div>
   </div>
 );
 
@@ -258,7 +141,7 @@ const WHSSizes = () => {
             <article key={s.model} style={{
               background: "var(--paper)", border: `1px solid ${s.featured ? "var(--orange)" : "var(--rule)"}`,
               borderRadius: 22, padding: 36, position: "relative",
-              boxShadow: s.featured ? "0 30px 60px -36px rgba(232,122,42,.4)" : "none",
+              boxShadow: s.featured ? "0 30px 60px -36px rgba(222,81,19,.4)" : "none",
             }}>
               {s.featured && (
                 <span style={{
@@ -268,8 +151,13 @@ const WHSSizes = () => {
                   fontSize: 11, fontFamily: "var(--f-mono)", letterSpacing: ".08em", textTransform: "uppercase",
                 }}>most popular</span>
               )}
-              <div style={{ display: "flex", alignItems: "start", gap: 24, marginBottom: 32 }}>
-                <TankSilhouette size={s.featured ? 220 : 180} />
+              <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 32 }}>
+                <div style={{
+                  width: 68, height: 68, borderRadius: 18, flexShrink: 0,
+                  background: s.featured ? "var(--orange-soft)" : "var(--bg-2)",
+                  color: s.featured ? "var(--orange)" : "var(--ink-3)",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                }}><Icon name="drop" size={32} /></div>
                 <div>
                   <div style={{ fontFamily: "var(--f-mono)", fontSize: 12, color: "var(--ink-3)", letterSpacing: ".1em", textTransform: "uppercase", marginBottom: 6 }}>
                     Model
@@ -319,16 +207,16 @@ const TankSilhouette = ({ size = 180 }) => (
       </linearGradient>
     </defs>
     {/* top cap */}
-    <rect x="20" y="2" width="40" height="14" rx="4" fill="#1F1B17"/>
-    <circle cx="40" cy="9" r="3" fill="#E87A2A"/>
+    <rect x="20" y="2" width="40" height="14" rx="4" fill="#222222"/>
+    <circle cx="40" cy="9" r="3" fill="#DE5113"/>
     {/* tank body */}
     <rect x="8" y="16" width="64" height="160" rx="6" fill="url(#jacket)" stroke="#5a5a5a" strokeWidth="0.6"/>
     {/* base */}
-    <rect x="14" y="176" width="52" height="20" rx="4" fill="#1F1B17"/>
+    <rect x="14" y="176" width="52" height="20" rx="4" fill="#222222"/>
     {/* label band */}
-    <rect x="14" y="60" width="52" height="36" fill="#1F1B17" opacity="0.85"/>
-    <text x="40" y="76" textAnchor="middle" fontSize="6" fill="#FAF6EE" fontFamily="JetBrains Mono">D&apos;ORANGE</text>
-    <text x="40" y="86" textAnchor="middle" fontSize="6" fill="#E87A2A" fontFamily="JetBrains Mono">WH</text>
+    <rect x="14" y="60" width="52" height="36" fill="#222222" opacity="0.85"/>
+    <text x="40" y="76" textAnchor="middle" fontSize="6" fill="#FFFFFF" fontFamily="JetBrains Mono">D&apos;ORANGE</text>
+    <text x="40" y="86" textAnchor="middle" fontSize="6" fill="#DE5113" fontFamily="JetBrains Mono">WH</text>
   </svg>
 );
 
@@ -348,7 +236,7 @@ const WHSStages = () => {
       n: "02",
       name: "Ultra Blend Plus",
       sub: "Special activated carbon blend",
-      color: "#1F1B17",
+      color: "#222222",
       removes: ["Chlorine", "Sediment", "VOCs", "Herbicides", "Heavy metals", "THMs", "Bad taste & odors"],
       d: "A specialty activated carbon blend that polishes the water — pulling out residual chlorine, sediment, volatile organic compounds, herbicides, heavy metals, and trihalomethanes (THMs). This is the stage that gets rid of bad taste and odors before water reaches your tap.",
     },
@@ -364,7 +252,7 @@ const WHSStages = () => {
       n: "04",
       name: "Magnetic Field Technology",
       sub: "Breakthrough salt-free conditioning",
-      color: "#E87A2A",
+      color: "#DE5113",
       removes: ["Hard water scale", "Pipe deposits", "pH imbalance"],
       d: "A breakthrough magnetic field reverses the hard water condition and replicates soft-water behavior without using salt or electricity. It maintains a balanced pH and leaves the vital minerals your body actually needs intact — no consumables, no waste water, no monthly salt to buy.",
     },
@@ -387,15 +275,14 @@ const WHSStages = () => {
             background: "var(--paper)", border: "1px solid var(--rule)",
             borderRadius: 22, padding: 32, position: "sticky", top: 100,
           }}>
-            <StageStack active={active} setActive={setActive} stages={stages} />
-            <div style={{
-              marginTop: 20, paddingTop: 20, borderTop: "1px solid var(--rule)",
-              display: "flex", justifyContent: "space-between",
-              fontSize: 11, fontFamily: "var(--f-mono)", color: "var(--ink-3)",
-              letterSpacing: ".1em", textTransform: "uppercase",
-            }}>
-              <span>Water IN ↓</span>
-              <span>↓ Filtered water OUT</span>
+            {/* Manufacturer cutaway diagram replaces the old animated tank stack.
+                The image already carries WATER IN/OUT and stage labels. */}
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="uploads/system-cutaway.png"
+                alt="Cutaway of the D'Orange whole-home filtration system showing the composite inner tank, 18/8 stainless steel jacket, and staged media beds"
+                style={{ maxWidth: "100%", maxHeight: 620, objectFit: "contain", display: "block" }}
+              />
             </div>
           </div>
 
@@ -840,11 +727,11 @@ const WHSCta = () => (
         <div style={{
           position: "absolute", top: -100, right: -100, width: 500, height: 500,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(232,122,42,0.4), transparent 60%)",
+          background: "radial-gradient(circle, rgba(222,81,19,0.4), transparent 60%)",
         }}/>
         <div className="grid-cta">
           <div>
-            <div className="eyebrow" style={{ color: "rgba(250,246,238,0.5)", marginBottom: 16 }}>// Next step</div>
+            <div className="eyebrow" style={{ color: "rgba(255,255,255,0.5)", marginBottom: 16 }}>// Next step</div>
             <h2 style={{ color: "var(--paper)", marginBottom: 14, maxWidth: 640 }}>
               Your system, sized to your water.
             </h2>
@@ -859,7 +746,7 @@ const WHSCta = () => (
             </a>
             <a href="tel:+12395550199" style={{
               padding: "16px 24px", borderRadius: 999,
-              border: "1px solid rgba(250,246,238,0.25)", color: "var(--paper)",
+              border: "1px solid rgba(255,255,255,0.25)", color: "var(--paper)",
               fontSize: 14, fontWeight: 500, whiteSpace: "nowrap",
               display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10,
             }}>Call (239) 555-0199 <Icon name="phone" size={14} /></a>

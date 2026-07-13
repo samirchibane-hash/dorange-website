@@ -218,11 +218,8 @@ const Footer = () => {
       <div className="container-wide">
         <div className="grid-footer" style={{ marginBottom: 64 }}>
           <div>
-            <div style={{ display: "flex", gap: 10, alignItems: "center", marginBottom: 20, color: "var(--paper)" }}>
-              <LogoMark size={44} />
-              <span style={{ fontFamily: "var(--f-display)", fontSize: 22 }}>
-                D&apos;Orange <span style={{ fontStyle: "italic", color: "var(--orange)" }}>Services</span>
-              </span>
+            <div style={{ marginBottom: 20 }}>
+              <img src="assets/logo.png" alt="D'Orange Services" style={{ height: 46, width: "auto", display: "block" }} />
             </div>
             <p style={{ fontSize: 14, opacity: .7, maxWidth: 320, marginBottom: 24 }}>
               Family-owned water treatment for Southwest Florida homes. Naples, FL · Since 2014.
@@ -231,7 +228,7 @@ const Footer = () => {
               {["IG", "FB", "YT", "G"].map(s => (
                 <a key={s} href="#" style={{
                   width: 36, height: 36, borderRadius: 999,
-                  background: "rgba(250,246,238,0.08)",
+                  background: "rgba(255,255,255,0.08)",
                   display: "inline-flex", alignItems: "center", justifyContent: "center",
                   fontSize: 11, fontFamily: "var(--f-mono)", letterSpacing: ".1em",
                 }}>{s}</a>
@@ -240,7 +237,7 @@ const Footer = () => {
           </div>
           {cols.map(c => (
             <div key={c.title}>
-              <div className="eyebrow" style={{ color: "rgba(250,246,238,0.5)", marginBottom: 16 }}>{c.title}</div>
+              <div className="eyebrow" style={{ color: "rgba(255,255,255,0.5)", marginBottom: 16 }}>{c.title}</div>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "grid", gap: 10 }}>
                 {c.links.map(item => (
                   <li key={item.l}><a href={item.href || "#"} style={{ fontSize: 14, opacity: .75 }}
@@ -258,7 +255,7 @@ const Footer = () => {
           fontSize: "clamp(80px, 15vw, 240px)",
           lineHeight: 0.9,
           letterSpacing: "-0.04em",
-          color: "rgba(250,246,238,0.07)",
+          color: "rgba(255,255,255,0.07)",
           whiteSpace: "nowrap",
           overflow: "hidden",
           marginBottom: 32,
@@ -270,7 +267,7 @@ const Footer = () => {
 
         <div style={{
           display: "flex", justifyContent: "space-between", alignItems: "center",
-          paddingTop: 24, borderTop: "1px solid rgba(250,246,238,0.1)",
+          paddingTop: 24, borderTop: "1px solid rgba(255,255,255,0.1)",
           fontSize: 12, opacity: .55,
           flexWrap: "wrap", gap: 16,
         }}>

@@ -1,12 +1,12 @@
 // Placeholder imagery — subtle striped SVG with monospace labels.
 const Placeholder = ({ label, aspect = "4/3", tone = "orange", rounded = 14, style = {} }) => {
   const tones = {
-    orange: { a: "#FBE3CB", b: "#F6CDA6", ink: "#D9651A" },
-    leaf:   { a: "#DFEBCF", b: "#CDDDB6", ink: "#4E8732" },
-    sea:    { a: "#CFE1EA", b: "#B6D0DC", ink: "#2F86A6" },
-    warm:   { a: "#F2EBDA", b: "#E8DFC7", ink: "#6B6259" },
-    ink:    { a: "#2A2620", b: "#1F1B17", ink: "#FAF6EE" },
-    paper:  { a: "#F4EFE3", b: "#E8E0CD", ink: "#6B6259" },
+    orange: { a: "#FBE4DA", b: "#F6C9B3", ink: "#98370D" },
+    leaf:   { a: "#E3EEDA", b: "#CFE0BE", ink: "#4E8A3E" },
+    sea:    { a: "#D6F3F8", b: "#B4E7F0", ink: "#0392AB" },
+    warm:   { a: "#F6F6F8", b: "#ECECEC", ink: "#6E6E6E" },
+    ink:    { a: "#2B2B2B", b: "#222222", ink: "#FFFFFF" },
+    paper:  { a: "#F6F6F8", b: "#ECECEC", ink: "#6E6E6E" },
   };
   const t = tones[tone] || tones.orange;
   return (
@@ -105,23 +105,23 @@ const Stars = ({ n = 5, size = 14 }) => (
 const LogoMark = ({ size = 40 }) => (
   <svg width={size} height={size} viewBox="0 0 64 64" fill="none" style={{ display: "block" }}>
     {/* leaf */}
-    <path d="M22 8c1 -5 8 -6 11 -3 -1 5 -6 8 -10 7Z" fill="#5C9E3D" />
+    <path d="M22 8c1 -5 8 -6 11 -3 -1 5 -6 8 -10 7Z" fill="#4E8A3E" />
     <path d="M22 8c4 -2 7 -1 11 -3" stroke="#3B7126" strokeWidth="0.8" strokeLinecap="round" />
     {/* outer half-circle */}
     <path d="M10 32a22 22 0 0 1 44 0Z"
-      fill="none" stroke="#E87A2A" strokeWidth="3" strokeLinejoin="round" />
+      fill="none" stroke="#DE5113" strokeWidth="3" strokeLinejoin="round" />
     {/* inner ring */}
     <path d="M16 32a16 16 0 0 1 32 0Z"
-      fill="none" stroke="#E87A2A" strokeWidth="1.4" />
+      fill="none" stroke="#DE5113" strokeWidth="1.4" />
     {/* segments */}
     {[-60, -30, 0, 30, 60].map(a => {
       const r = 15.2;
       const x = 32 + r * Math.cos((a - 90) * Math.PI / 180);
       const y = 32 + r * Math.sin((a - 90) * Math.PI / 180);
-      return <line key={a} x1="32" y1="32" x2={x} y2={y} stroke="#E87A2A" strokeWidth="1.4" strokeLinecap="round" />;
+      return <line key={a} x1="32" y1="32" x2={x} y2={y} stroke="#DE5113" strokeWidth="1.4" strokeLinecap="round" />;
     })}
     {/* center dot */}
-    <circle cx="32" cy="32" r="1.8" fill="#E87A2A" />
+    <circle cx="32" cy="32" r="1.8" fill="#DE5113" />
   </svg>
 );
 
