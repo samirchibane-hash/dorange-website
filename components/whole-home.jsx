@@ -104,7 +104,6 @@ const WHSOptions = () => {
         "Compact — fits at the fixture or under the sink",
         "A simple, affordable place to start",
       ],
-      image: "uploads/carico-tanks.png",
     },
     {
       tag: "Point of Entry",
@@ -117,7 +116,6 @@ const WHSOptions = () => {
         "One system for your entire home",
         "Ideal for homeowners & larger households",
       ],
-      image: "uploads/WhatsApp Image 2024-07-18 at 18.26.41.jpeg",
     },
   ];
   const tones = {
@@ -147,15 +145,7 @@ const WHSOptions = () => {
                 background: "var(--paper)", border: "1px solid var(--rule)",
                 borderRadius: 22, overflow: "hidden", display: "flex", flexDirection: "column",
               }}>
-                <div style={{
-                  aspectRatio: "16/10",
-                  background: "radial-gradient(120% 100% at 50% 0%, var(--bg-2), #FFFFFF 78%)",
-                  display: "flex", alignItems: "center", justifyContent: "center", padding: 28,
-                  borderBottom: "1px solid var(--rule)",
-                }}>
-                  <img src={o.image} alt={o.t} style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
-                </div>
-                <div style={{ padding: 36, display: "flex", flexDirection: "column", flex: 1 }}>
+                <div style={{ padding: 40, display: "flex", flexDirection: "column", flex: 1 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
                     <div style={{
                       width: 48, height: 48, borderRadius: 12, background: t.bg, color: t.fg,
