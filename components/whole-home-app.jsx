@@ -4,9 +4,9 @@ const WholeHomeApp = () => (
     <Nav />
     <main>
       <WHSHero />
-      <WHSStages />
-      <WHSEngineered />
+      <WHSOptions />
       <WHSBenefits />
+      <WHSProcess />
       <WHSFaq />
       <WHSCta />
     </main>
