@@ -18,7 +18,7 @@ const Nav = () => {
 
   const links = [
     { label: "Water Systems", href: "Whole Home System.html", items: null },
-    { label: "How it works", href: "How It Works.html", items: null },
+    { label: "Water Test", href: "How It Works.html", items: null },
     { label: "Other Services", items: [
       { label: "JuiceMaster Juice Extractor", href: "JuiceMaster.html" },
       { label: "Deluxe Air Purifier",         href: "Air Purifier.html" },
