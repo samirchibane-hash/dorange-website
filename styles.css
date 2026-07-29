@@ -125,6 +125,9 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 
 /* ── Responsive layout helpers ───────────────────────────── */
 .grid-hero    { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
+/* Reel sections: roomier than a hero on desktop, but still collapses to the
+   mobile gap below — the .grid-hero rule in the 767px block overrides this. */
+.reel-row     { gap: 64px; }
 .grid-2col    { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .grid-3col    { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .grid-sidebar { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }

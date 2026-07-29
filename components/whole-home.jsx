@@ -226,7 +226,7 @@ const WHS_REEL_URL = "https://www.instagram.com/reel/DISC6ZvBbut/";
 const WHSTestimonialReel = () => (
   <section id="customer-story">
     <div className="container-wide">
-      <div className="grid-hero" style={{ gap: 64 }}>
+      <div className="grid-hero reel-row">
         <div>
           <div className="eyebrow" style={{ marginBottom: 16 }}>// Customer story</div>
           <h2 style={{ marginBottom: 20 }}>

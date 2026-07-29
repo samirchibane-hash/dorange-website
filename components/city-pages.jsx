@@ -451,7 +451,7 @@ const CITY_REEL_URL = "https://www.instagram.com/reel/DHtvOMLiQ7O/";
 const CityReel = ({ cityName }) => (
   <section id="see-it" style={{ background: "var(--bg-2)" }}>
     <div className="container-wide">
-      <div className="grid-hero" style={{ gap: 64 }}>
+      <div className="grid-hero reel-row">
         <div>
           <div className="eyebrow" style={{ marginBottom: 16 }}>// See it for yourself</div>
           <h2 style={{ marginBottom: 20, maxWidth: 480 }}>
