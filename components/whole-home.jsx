@@ -69,7 +69,7 @@ const WHSHeroVisual = () => (
       background: "radial-gradient(120% 100% at 50% 0%, var(--bg-2), #FFFFFF 72%)",
       padding: 36, display: "flex", alignItems: "center", justifyContent: "center",
     }}>
-      <img src="uploads/carico-tanks.png" alt="D'Orange water systems in a range of sizes"
+      <img src="uploads/water-system-tanks.png" alt="D'Orange water systems in a range of sizes"
         style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
     </div>
     <div className="hero-annotation"><div style={{

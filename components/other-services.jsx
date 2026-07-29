@@ -10,7 +10,7 @@ const otherProducts = [
     subtitle: "Juice Extractor",
     category: "Nutrition",
     tone: "leaf",
-    image: "uploads/carico-juice-master-professional-oph4jepbp7tdgyrv0x3zuvnncjnn0efk2wcao06a8g.jpg",
+    image: "uploads/juice-extractor.jpg",
     categoryColor: "var(--leaf)",
     categorySoft: "var(--leaf-soft)",
     description:
@@ -34,7 +34,7 @@ const otherProducts = [
     subtitle: "Whole-Home Purification",
     category: "Water & Air",
     tone: "sea",
-    image: "uploads/CARICO_water-filtration_TREATMENT_SYSTEM_FROM_HEALTH_CRAFT_3cae2b5e-8fcc-455c-bced-6009f1219afd_1024x1024.webp",
+    image: "uploads/water-filtration-system.webp",
     categoryColor: "var(--sea)",
     categorySoft: "var(--sea-soft)",
     description:
