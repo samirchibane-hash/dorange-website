@@ -6,6 +6,7 @@ const HomeApp = () => (
       <HomeHero />
       <HomeSystems />
       <HomeBenefits />
+      <FeaturedReel />
       <HomeService />
       <HomeServiceAreas />
       <FreeTestBanner />
