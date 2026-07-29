@@ -22,7 +22,7 @@ const FeaturedReel = () => (
             book a free water test with us.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "14px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href={IG_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
@@ -66,7 +66,7 @@ const CustomerReel = () => (
             straight answer about what their home needed.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "14px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href={CUSTOMER_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>

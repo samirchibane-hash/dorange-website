@@ -10,7 +10,7 @@ const WHSHero = () => (
     <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="Whole Home System.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Water Systems</a>
+          <a href="/Whole%20Home%20System" style={{ fontSize: 13, color: "var(--ink-3)" }}>Water Systems</a>
           <span style={{ color: "var(--ink-4)" }}>/</span>
           <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Point of use &amp; point of entry</span>
         </div>
@@ -32,7 +32,7 @@ const WHSHero = () => (
         </p>
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48, flexWrap: "wrap" }}>
-          <a href="Book Free Water Test.html" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
+          <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
           <a href="#options" className="btn btn-ghost">Compare your options <Icon name="arrow" size={12} /></a>
         </div>
 
@@ -162,7 +162,7 @@ const WHSOptions = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href="Book Free Water Test.html" className="btn btn-primary" style={{ marginTop: "auto", justifyContent: "center", padding: "14px 22px" }}>
+                  <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ marginTop: "auto", justifyContent: "center", padding: "14px 22px" }}>
                     Book free water test <Icon name="arrow" size={14} />
                   </a>
                 </div>
@@ -242,7 +242,7 @@ const WHSTestimonialReel = () => (
             recommendation about what your home actually needs.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "14px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href={WHS_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
@@ -368,7 +368,7 @@ const WHSCta = () => (
             </p>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ justifyContent: "center", padding: "16px 24px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ justifyContent: "center", padding: "16px 24px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href="tel:+12395550199" style={{

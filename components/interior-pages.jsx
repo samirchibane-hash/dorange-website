@@ -92,7 +92,7 @@ const AboutPage = () => (
         }} />
         <div className="container-wide" style={{ position: "relative" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-            <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+            <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
             <span style={{ fontSize: 13, color: "var(--ink-2)" }}>About</span>
           </div>
@@ -180,7 +180,7 @@ const HowItWorksPage = () => (
         }} />
         <div className="container-wide" style={{ position: "relative" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-            <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+            <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
             <span style={{ fontSize: 13, color: "var(--ink-2)" }}>How it works</span>
           </div>

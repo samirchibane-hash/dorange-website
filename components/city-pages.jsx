@@ -9,7 +9,7 @@ const citiesData = [
     id: "naples",
     name: "Naples",
     county: "Collier County",
-    href: "naples-water-treatment.html",
+    href: "/naples-water-treatment",
 
     heroPre: "// Naples, FL — Collier County",
     heroLine1: "Naples water is one of",
@@ -71,7 +71,7 @@ const citiesData = [
     id: "bonita-springs",
     name: "Bonita Springs",
     county: "Lee / Collier County",
-    href: "bonita-springs-water-treatment.html",
+    href: "/bonita-springs-water-treatment",
 
     heroPre: "// Bonita Springs, FL — Lee & Collier County",
     heroLine1: "Bonita Springs sits on two counties,",
@@ -133,7 +133,7 @@ const citiesData = [
     id: "marco-island",
     name: "Marco Island",
     county: "Collier County",
-    href: "marco-island-water-treatment.html",
+    href: "/marco-island-water-treatment",
 
     heroPre: "// Marco Island, FL — Collier County",
     heroLine1: "Marco Island water works",
@@ -195,7 +195,7 @@ const citiesData = [
     id: "estero",
     name: "Estero",
     county: "Lee County",
-    href: "estero-water-treatment.html",
+    href: "/estero-water-treatment",
 
     heroPre: "// Estero, FL — Lee County",
     heroLine1: "Estero’s chloramine water",
@@ -257,7 +257,7 @@ const citiesData = [
     id: "fort-myers",
     name: "Fort Myers",
     county: "Lee County",
-    href: "fort-myers-water-treatment.html",
+    href: "/fort-myers-water-treatment",
 
     heroPre: "// Fort Myers, FL — Lee County",
     heroLine1: "Fort Myers water is tougher",
@@ -320,7 +320,7 @@ const citiesData = [
     id: "cape-coral",
     name: "Cape Coral",
     county: "Lee County",
-    href: "cape-coral-water-treatment.html",
+    href: "/cape-coral-water-treatment",
 
     heroPre: "// Cape Coral, FL — Lee County",
     heroLine1: "Cape Coral has some of",
@@ -467,7 +467,7 @@ const CityReel = ({ cityName }) => (
             home actually needs.
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "14px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
             <a href={CITY_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
@@ -502,7 +502,7 @@ const CityLandingPage = ({ city }) => (
 
           {/* Breadcrumb */}
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24, flexWrap: "wrap" }}>
-            <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+            <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
             <span style={{ fontSize: 13, color: "var(--ink-3)" }}>Service Areas</span>
             <span style={{ color: "var(--ink-4)" }}>/</span>
@@ -518,7 +518,7 @@ const CityLandingPage = ({ city }) => (
             {city.heroSub}
           </p>
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary">
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">
               Book your free water test <Icon name="arrow" size={14} />
             </a>
             <a href="tel:+12395550199" className="btn btn-ghost btn-sm">
@@ -615,10 +615,10 @@ const CityLandingPage = ({ city }) => (
                 for a single tap — matched to your water and installed by certified local techs.
               </p>
               <div style={{ display: "flex", gap: 12, marginTop: 28, flexWrap: "wrap" }}>
-                <a href="Book Free Water Test.html" className="btn btn-primary">
+                <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">
                   Book a free water test <Icon name="arrow" size={14} />
                 </a>
-                <a href="Whole Home System.html" className="btn btn-ghost btn-sm" style={{ alignSelf: "center" }}>
+                <a href="/Whole%20Home%20System" className="btn btn-ghost btn-sm" style={{ alignSelf: "center" }}>
                   See water systems
                 </a>
               </div>

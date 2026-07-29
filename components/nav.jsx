@@ -17,24 +17,24 @@ const Nav = () => {
   }, [mobileOpen]);
 
   const links = [
-    { label: "Home", href: "index.html", items: null },
-    { label: "Water Systems", href: "Whole Home System.html", items: null },
-    { label: "Water Test", href: "How It Works.html", items: null },
+    { label: "Home", href: "/", items: null },
+    { label: "Water Systems", href: "/Whole%20Home%20System", items: null },
+    { label: "Water Test", href: "/How%20It%20Works", items: null },
     { label: "Other Services", items: [
-      { label: "JuiceMaster Juice Extractor", href: "JuiceMaster.html" },
-      { label: "Deluxe Air Purifier",         href: "Air Purifier.html" },
-      { label: "Sleep System Ultra Tech",     href: "Grounding Sleep System.html" },
-      { label: "Ultra Tech 2 Cookware",       href: "Ultra Tech Cookware.html" },
+      { label: "JuiceMaster Juice Extractor", href: "/JuiceMaster" },
+      { label: "Deluxe Air Purifier",         href: "/Air%20Purifier" },
+      { label: "Sleep System Ultra Tech",     href: "/Grounding%20Sleep%20System" },
+      { label: "Ultra Tech 2 Cookware",       href: "/Ultra%20Tech%20Cookware" },
     ] },
     { label: "Service areas", items: [
-      { label: "Naples",         href: "naples-water-treatment.html" },
-      { label: "Bonita Springs", href: "bonita-springs-water-treatment.html" },
-      { label: "Marco Island",   href: "marco-island-water-treatment.html" },
-      { label: "Estero",         href: "estero-water-treatment.html" },
-      { label: "Fort Myers",     href: "fort-myers-water-treatment.html" },
-      { label: "Cape Coral",     href: "cape-coral-water-treatment.html" },
+      { label: "Naples",         href: "/naples-water-treatment" },
+      { label: "Bonita Springs", href: "/bonita-springs-water-treatment" },
+      { label: "Marco Island",   href: "/marco-island-water-treatment" },
+      { label: "Estero",         href: "/estero-water-treatment" },
+      { label: "Fort Myers",     href: "/fort-myers-water-treatment" },
+      { label: "Cape Coral",     href: "/cape-coral-water-treatment" },
     ] },
-    { label: "About", href: "About.html", items: null },
+    { label: "About", href: "/About", items: null },
   ];
 
   return (
@@ -51,7 +51,7 @@ const Nav = () => {
           display: "flex", alignItems: "center", justifyContent: "space-between",
           padding: "14px 0",
         }}>
-          <a href="index.html" style={{ display: "flex", alignItems: "center" }} aria-label="D'Orange Services — home">
+          <a href="/" style={{ display: "flex", alignItems: "center" }} aria-label="D'Orange Services — home">
             <img src="assets/logo.png" alt="D'Orange Services" style={{ height: 40, width: "auto", display: "block" }} />
           </a>
 
@@ -109,7 +109,7 @@ const Nav = () => {
             <a href="tel:+12395550199" className="btn btn-sm" style={{ color: "var(--ink-2)" }}>
               <Icon name="phone" size={12} /> (239) 555-0199
             </a>
-            <a href="Book Free Water Test.html" className="btn btn-primary btn-sm">Free water test</a>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary btn-sm">Free water test</a>
           </div>
 
           {/* Hamburger */}
@@ -178,7 +178,7 @@ const Nav = () => {
             ))}
           </div>
           <div style={{ padding: "24px 20px", borderTop: "1px solid var(--rule)" }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ width: "100%", justifyContent: "center", padding: "16px 22px" }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
           </div>

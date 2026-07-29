@@ -28,7 +28,7 @@ const Hero = () => {
 
           {/* CTAs */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", maxWidth: 540 }}>
-            <a href="Book Free Water Test.html" className="btn btn-primary" style={{
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{
               padding: "16px 22px", fontSize: 15,
             }}>
               Book free water test <Icon name="arrow" size={14} />
@@ -154,7 +154,7 @@ const HeroVisual = () => {
             <div style={{ fontSize: 11, letterSpacing: ".1em", opacity: .6, textTransform: "uppercase", fontFamily: "var(--f-mono)" }}>recent install</div>
             <div style={{ fontFamily: "var(--f-display)", fontSize: 17 }}>Whole-Home System · Pelican Bay, Naples</div>
           </div>
-          <a href="Whole Home System.html" style={{
+          <a href="/Whole%20Home%20System" style={{
             padding: "8px 14px", borderRadius: 999,
             background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
             display: "inline-flex", alignItems: "center", gap: 6,

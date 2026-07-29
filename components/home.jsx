@@ -24,10 +24,10 @@ const HomeHero = () => (
         or throughout the whole house — and stands behind them with local, certified service.
       </p>
       <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-        <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "16px 24px", fontSize: 15 }}>
+        <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "16px 24px", fontSize: 15 }}>
           Book free water test <Icon name="arrow" size={14} />
         </a>
-        <a href="Whole Home System.html" className="btn" style={{
+        <a href="/Whole%20Home%20System" className="btn" style={{
           padding: "16px 24px", fontSize: 15,
           border: "1px solid var(--rule)", background: "var(--paper)", color: "var(--ink)",
         }}>
@@ -112,7 +112,7 @@ const HomeSystems = () => {
                 </div>
                 <h3 style={{ fontFamily: "var(--f-display)", fontSize: 24, marginBottom: 12 }}>{o.t}</h3>
                 <p style={{ color: "var(--ink-2)", fontSize: 15, lineHeight: 1.6, marginBottom: 28 }}>{o.d}</p>
-                <a href="Whole Home System.html" className="btn btn-dark" style={{ marginTop: "auto", alignSelf: "start", padding: "14px 22px" }}>
+                <a href="/Whole%20Home%20System" className="btn btn-dark" style={{ marginTop: "auto", alignSelf: "start", padding: "14px 22px" }}>
                   Learn more <Icon name="arrow" size={14} />
                 </a>
               </article>
@@ -194,7 +194,7 @@ const HomeService = () => {
               We&apos;re a family-run team based in Naples. The same people who test your water
               install your system — and pick up the phone years later.
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-primary">Book your free test <Icon name="arrow" size={14} /></a>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">Book your free test <Icon name="arrow" size={14} /></a>
           </div>
           <div>
             {steps.map((s, i) => (
@@ -222,12 +222,12 @@ const HomeService = () => {
 // ─── Service areas ─────────────────────────────────────────
 const HomeServiceAreas = () => {
   const cities = [
-    { n: "Naples",         href: "naples-water-treatment.html", note: "HQ" },
-    { n: "Bonita Springs", href: "bonita-springs-water-treatment.html" },
-    { n: "Marco Island",   href: "marco-island-water-treatment.html" },
-    { n: "Estero",         href: "estero-water-treatment.html" },
-    { n: "Fort Myers",     href: "fort-myers-water-treatment.html" },
-    { n: "Cape Coral",     href: "cape-coral-water-treatment.html" },
+    { n: "Naples",         href: "/naples-water-treatment", note: "HQ" },
+    { n: "Bonita Springs", href: "/bonita-springs-water-treatment" },
+    { n: "Marco Island",   href: "/marco-island-water-treatment" },
+    { n: "Estero",         href: "/estero-water-treatment" },
+    { n: "Fort Myers",     href: "/fort-myers-water-treatment" },
+    { n: "Cape Coral",     href: "/cape-coral-water-treatment" },
   ];
   return (
     <section style={{ background: "var(--ink)", color: "var(--paper)", position: "relative", overflow: "hidden" }}>
@@ -247,7 +247,7 @@ const HomeServiceAreas = () => {
               We&apos;re based in Naples and we service everywhere our trucks can reach in a workday.
               If you&apos;re close to the Gulf, we&apos;re close to you.
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-light">
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-light">
               Check my address <Icon name="arrow" size={14} />
             </a>
           </div>
@@ -298,7 +298,7 @@ const FreeTestBanner = () => (
             A certified D&apos;Orange tech comes to your home, checks your water on the spot, and walks
             you through what we find — no obligation, same-week appointments.
           </p>
-          <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "16px 24px", fontSize: 15 }}>
+          <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "16px 24px", fontSize: 15 }}>
             Schedule yours <Icon name="arrow" size={14} />
           </a>
         </div>

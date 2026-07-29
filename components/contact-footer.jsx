@@ -191,26 +191,26 @@ const inputStyle = (err) => ({
 const Footer = () => {
   const cols = [
     { title: "Solutions", links: [
-      { l: "Whole-Home Filtration System", href: "Whole Home System.html" },
-      { l: "Other Services",               href: "Other Services.html" },
-      { l: "JuiceMaster",                  href: "JuiceMaster.html" },
-      { l: "Deluxe Air Purifier",          href: "Air Purifier.html" },
-      { l: "Sleep System Ultra Tech",      href: "Grounding Sleep System.html" },
-      { l: "Ultra Tech 2 Cookware",        href: "Ultra Tech Cookware.html" },
-      { l: "Multi-Stage Filtration",       href: "Filtration Cartridge.html" },
+      { l: "Whole-Home Filtration System", href: "/Whole%20Home%20System" },
+      { l: "Other Services",               href: "/Other%20Services" },
+      { l: "JuiceMaster",                  href: "/JuiceMaster" },
+      { l: "Deluxe Air Purifier",          href: "/Air%20Purifier" },
+      { l: "Sleep System Ultra Tech",      href: "/Grounding%20Sleep%20System" },
+      { l: "Ultra Tech 2 Cookware",        href: "/Ultra%20Tech%20Cookware" },
+      { l: "Multi-Stage Filtration",       href: "/Filtration%20Cartridge" },
     ] },
     { title: "Company", links: [
-      { l: "About",                href: "About.html" },
-      { l: "How it works",        href: "How It Works.html" },
-      { l: "Book free water test", href: "Book Free Water Test.html" },
+      { l: "About",                href: "/About" },
+      { l: "How it works",        href: "/How%20It%20Works" },
+      { l: "Book free water test", href: "/Book%20Free%20Water%20Test" },
     ] },
     { title: "Service areas", links: [
-      { l: "Naples",         href: "naples-water-treatment.html" },
-      { l: "Bonita Springs", href: "bonita-springs-water-treatment.html" },
-      { l: "Marco Island",   href: "marco-island-water-treatment.html" },
-      { l: "Estero",         href: "estero-water-treatment.html" },
-      { l: "Fort Myers",     href: "fort-myers-water-treatment.html" },
-      { l: "Cape Coral",     href: "cape-coral-water-treatment.html" },
+      { l: "Naples",         href: "/naples-water-treatment" },
+      { l: "Bonita Springs", href: "/bonita-springs-water-treatment" },
+      { l: "Marco Island",   href: "/marco-island-water-treatment" },
+      { l: "Estero",         href: "/estero-water-treatment" },
+      { l: "Fort Myers",     href: "/fort-myers-water-treatment" },
+      { l: "Cape Coral",     href: "/cape-coral-water-treatment" },
     ] },
   ];
   return (

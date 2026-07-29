@@ -5,7 +5,7 @@
 const otherProducts = [
   {
     id: "juicemaster",
-    href: "JuiceMaster.html",
+    href: "/JuiceMaster",
     title: "JuiceMaster",
     subtitle: "Juice Extractor",
     category: "Nutrition",
@@ -29,7 +29,7 @@ const otherProducts = [
   },
   {
     id: "filtration-cartridge",
-    href: "Filtration Cartridge.html",
+    href: "/Filtration%20Cartridge",
     title: "Multi-Stage Filtration System",
     subtitle: "Whole-Home Purification",
     category: "Water & Air",
@@ -53,7 +53,7 @@ const otherProducts = [
   },
   {
     id: "grounding-mattress",
-    href: "Grounding Sleep System.html",
+    href: "/Grounding%20Sleep%20System",
     title: "Sleep System Ultra Tech",
     subtitle: "Platinum Grounding Mattress",
     category: "Sleep & Wellness",
@@ -77,7 +77,7 @@ const otherProducts = [
   },
   {
     id: "ultra-tech-cookware",
-    href: "Ultra Tech Cookware.html",
+    href: "/Ultra%20Tech%20Cookware",
     title: "Ultra Tech 2 Cookware",
     subtitle: "9-Ply Surgical Steel Set",
     category: "Healthy Cooking",
@@ -101,7 +101,7 @@ const otherProducts = [
   },
   {
     id: "air-purifier",
-    href: "Air Purifier.html",
+    href: "/Air%20Purifier",
     title: "Deluxe Air Purifier",
     subtitle: "Whole-Home Air Purification",
     category: "Air Quality",
@@ -155,7 +155,7 @@ const OtherServicesPage = () => (
         }} />
         <div className="container-wide" style={{ position: "relative" }}>
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-            <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+            <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
             <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Other Services</span>
           </div>
@@ -350,7 +350,7 @@ const ProductHeroVisual = ({ product }) => {
               {product.ticker.text}
             </div>
           </div>
-          <a href="Book Free Water Test.html" style={{
+          <a href="/Book%20Free%20Water%20Test" style={{
             flexShrink: 0,
             padding: "7px 13px", borderRadius: 999,
             background: "var(--paper)", color: "var(--ink)", fontSize: 12, fontWeight: 500,
@@ -380,9 +380,9 @@ const ProductPageTemplate = ({ product }) => (
         <div className="container-wide" style={{ position: "relative" }}>
           {/* Breadcrumb */}
           <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24, flexWrap: "wrap" }}>
-            <a href="index.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
+            <a href="/" style={{ fontSize: 13, color: "var(--ink-3)" }}>Home</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
-            <a href="Other Services.html" style={{ fontSize: 13, color: "var(--ink-3)" }}>Other Services</a>
+            <a href="/Other%20Services" style={{ fontSize: 13, color: "var(--ink-3)" }}>Other Services</a>
             <span style={{ color: "var(--ink-4)" }}>/</span>
             <span style={{ fontSize: 13, color: "var(--ink-2)" }}>{product.title}</span>
           </div>
@@ -407,7 +407,7 @@ const ProductPageTemplate = ({ product }) => (
                 {product.description}
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-                <a href="Book Free Water Test.html" className="btn btn-primary">
+                <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">
                   Enquire now <Icon name="arrow" size={14} />
                 </a>
                 <a href="tel:+12395550199" className="btn btn-ghost btn-sm">
@@ -479,7 +479,7 @@ const ProductPageTemplate = ({ product }) => (
               <a href="tel:+12395550199" className="btn btn-dark">
                 <Icon name="phone" size={14} /> (239) 555-0199
               </a>
-              <a href="Book Free Water Test.html" className="btn btn-ghost">
+              <a href="/Book%20Free%20Water%20Test" className="btn btn-ghost">
                 Book an appointment
               </a>
             </div>

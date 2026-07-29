@@ -113,7 +113,7 @@ const Process = () => {
             <p style={{ color: "var(--ink-2)", maxWidth: 380, marginBottom: 28 }}>
               From the first sample to your first glass — every step is documented, transparent, and built around your home.
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-primary">Book your free test <Icon name="arrow" size={14} /></a>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">Book your free test <Icon name="arrow" size={14} /></a>
           </div>
           <div>
             {steps.map((s, i) => (
@@ -219,7 +219,7 @@ const ServiceMap = () => {
               We&apos;re based in Naples and we service everywhere our trucks can reach in a workday.
               If you&apos;re close to the Gulf, we&apos;re close to you.
             </p>
-            <a href="Book Free Water Test.html" className="btn btn-light">
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-light">
               Check my address <Icon name="arrow" size={14} />
             </a>
           </div>
