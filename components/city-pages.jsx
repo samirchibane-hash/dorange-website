@@ -445,6 +445,45 @@ const CityFAQ = ({ faqs, cityName }) => {
 };
 
 // ─── City landing page template ─────────────────────────────────────────────
+// Shared reel section — same post on every city page, copy keyed to the city.
+const CITY_REEL_URL = "https://www.instagram.com/reel/DHtvOMLiQ7O/";
+
+const CityReel = ({ cityName }) => (
+  <section id="see-it" style={{ background: "var(--bg-2)" }}>
+    <div className="container-wide">
+      <div className="grid-hero" style={{ gap: 64 }}>
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>// See it for yourself</div>
+          <h2 style={{ marginBottom: 20, maxWidth: 480 }}>
+            The team that shows up in<br/>
+            <span style={{ fontStyle: "italic", color: "var(--orange)" }}>{cityName}.</span>
+          </h2>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 24, lineHeight: 1.6 }}>
+            A look at how we work across Southwest Florida — the same certified local crew that
+            handles every {cityName} water test and install.
+          </p>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 32, lineHeight: 1.6 }}>
+            It starts with a free in-home water test and an honest recommendation about what your
+            home actually needs.
+          </p>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+              Book free water test <Icon name="arrow" size={14} />
+            </a>
+            <a href={CITY_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
+              Watch on Instagram <Icon name="arrow-ne" size={12} />
+            </a>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <InstagramEmbed url={CITY_REEL_URL} />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const CityLandingPage = ({ city }) => (
   <>
     <Nav />
@@ -633,10 +672,13 @@ const CityLandingPage = ({ city }) => (
         </div>
       </section>
 
-      {/* ── 6. FAQ ── */}
+      {/* ── 6. SEE IT FOR YOURSELF ── */}
+      <CityReel cityName={city.name} />
+
+      {/* ── 7. FAQ ── */}
       <CityFAQ faqs={city.faqs} cityName={city.name} />
 
-      {/* ── 7. CONTACT ── */}
+      {/* ── 8. CONTACT ── */}
       <Contact />
 
     </main>
