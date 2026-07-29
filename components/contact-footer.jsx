@@ -225,13 +225,19 @@ const Footer = () => {
               Family-owned water treatment for Southwest Florida homes. Naples, FL · Since 2014.
             </p>
             <div style={{ display: "flex", gap: 8 }}>
-              {["IG", "FB", "YT", "G"].map(s => (
-                <a key={s} href="#" style={{
-                  width: 36, height: 36, borderRadius: 999,
-                  background: "rgba(255,255,255,0.08)",
-                  display: "inline-flex", alignItems: "center", justifyContent: "center",
-                  fontSize: 11, fontFamily: "var(--f-mono)", letterSpacing: ".1em",
-                }}>{s}</a>
+              {SOCIAL_LINKS.map(s => (
+                <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
+                  aria-label={`D'Orange Services on ${s.label}`}
+                  style={{
+                    width: 36, height: 36, borderRadius: 999,
+                    background: "rgba(255,255,255,0.08)", color: "var(--paper)",
+                    display: "inline-flex", alignItems: "center", justifyContent: "center",
+                    transition: "background .2s ease",
+                  }}
+                  onMouseEnter={e => e.currentTarget.style.background = "rgba(255,255,255,0.18)"}
+                  onMouseLeave={e => e.currentTarget.style.background = "rgba(255,255,255,0.08)"}>
+                  <Icon name={s.icon} size={17} />
+                </a>
               ))}
             </div>
           </div>

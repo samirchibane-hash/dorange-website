@@ -1,3 +1,9 @@
+// Official D'Orange Services social profiles — single source of truth.
+const SOCIAL_LINKS = [
+  { label: "Instagram", icon: "instagram", href: "https://www.instagram.com/dorangeservices" },
+  { label: "Facebook",  icon: "facebook",  href: "https://www.facebook.com/people/DOrange-Services-LLC/100085660570537/" },
+];
+
 // Placeholder imagery — subtle striped SVG with monospace labels.
 const Placeholder = ({ label, aspect = "4/3", tone = "orange", rounded = 14, style = {} }) => {
   const tones = {
@@ -90,6 +96,10 @@ const Icon = ({ name, size = 18, stroke = 1.5 }) => {
       return <svg {...props}><path d="M2 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M2 13c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/><path d="M2 19c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/></svg>;
     case "filter":
       return <svg {...props}><path d="M3 4h18l-7 9v6l-4 2v-8L3 4Z"/></svg>;
+    case "instagram":
+      return <svg {...props}><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>;
+    case "facebook":
+      return <svg {...props}><path d="M15.5 3h-2.7A4.3 4.3 0 0 0 8.5 7.3V10H6v3.5h2.5V21H12v-7.5h2.6l.6-3.5H12V7.6c0-.6.5-1.1 1.1-1.1h2.4V3Z" fill="currentColor" stroke="none"/></svg>;
   }
   return null;
 };
@@ -135,4 +145,4 @@ const useIsMobile = (bp = 768) => {
   return m;
 };
 
-Object.assign(window, { Placeholder, Icon, Stars, LogoMark, useIsMobile });
+Object.assign(window, { SOCIAL_LINKS, Placeholder, Icon, Stars, LogoMark, useIsMobile });
