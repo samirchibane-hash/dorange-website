@@ -135,6 +135,50 @@ const LogoMark = ({ size = 40 }) => (
   </svg>
 );
 
+// Instagram post/reel embed. The blockquote is Instagram's official embed
+// markup translated to JSX; embed.js swaps it for an iframe once loaded. If the
+// script is blocked, the fallback card inside stays visible and links to the post.
+const InstagramEmbed = ({ url, caption = "A post shared by D´Orange Services (@dorangeservices)" }) => {
+  React.useEffect(() => {
+    const process = () => { if (window.instgrm) window.instgrm.Embeds.process(); };
+    const existing = document.querySelector('script[src*="instagram.com/embed.js"]');
+    if (existing) { process(); return; }
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.instagram.com/embed.js";
+    s.onload = process;
+    document.body.appendChild(s);
+  }, [url]);
+
+  return (
+    <blockquote
+      className="instagram-media"
+      data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+      data-instgrm-version="14"
+      style={{
+        background: "#FFF", border: 0, borderRadius: 16,
+        boxShadow: "var(--shadow-md)",
+        margin: 0, maxWidth: 540, minWidth: 300, width: "100%", padding: 0,
+      }}>
+      <a href={url} target="_blank" rel="noopener noreferrer" style={{
+        display: "block", padding: 28, textDecoration: "none", color: "var(--ink)",
+      }}>
+        <div style={{
+          display: "flex", alignItems: "center", justifyContent: "center",
+          minHeight: 200, marginBottom: 20, borderRadius: 12,
+          background: "var(--bg-2)", color: "var(--ink-3)",
+        }}>
+          <Icon name="play" size={34} />
+        </div>
+        <div style={{ fontFamily: "var(--f-display)", fontSize: 17, marginBottom: 6 }}>
+          View this post on Instagram
+        </div>
+        <div style={{ fontSize: 13, color: "var(--ink-3)" }}>{caption}</div>
+      </a>
+    </blockquote>
+  );
+};
+
 const useIsMobile = (bp = 768) => {
   const [m, setM] = React.useState(typeof window !== "undefined" && window.innerWidth < bp);
   React.useEffect(() => {
@@ -145,4 +189,4 @@ const useIsMobile = (bp = 768) => {
   return m;
 };
 
-Object.assign(window, { SOCIAL_LINKS, Placeholder, Icon, Stars, LogoMark, useIsMobile });
+Object.assign(window, { SOCIAL_LINKS, Placeholder, Icon, Stars, LogoMark, InstagramEmbed, useIsMobile });

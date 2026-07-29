@@ -6,6 +6,7 @@ const WholeHomeApp = () => (
       <WHSHero />
       <WHSOptions />
       <WHSBenefits />
+      <WHSTestimonialReel />
       <WHSProcess />
       <WHSFaq />
       <WHSCta />

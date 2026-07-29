@@ -220,6 +220,45 @@ const WHSBenefits = () => {
   );
 };
 
+// Customer testimonial reel, filmed after their install
+const WHS_REEL_URL = "https://www.instagram.com/reel/DISC6ZvBbut/";
+
+const WHSTestimonialReel = () => (
+  <section id="customer-story">
+    <div className="container-wide">
+      <div className="grid-hero" style={{ gap: 64 }}>
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>// Customer story</div>
+          <h2 style={{ marginBottom: 20 }}>
+            Hear it from<br/>
+            <span style={{ fontStyle: "italic", color: "var(--orange)" }}>a neighbor.</span>
+          </h2>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 24, lineHeight: 1.6 }}>
+            A Southwest Florida homeowner on what changed after we installed their system —
+            in their own words, a few weeks in.
+          </p>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 32, lineHeight: 1.6 }}>
+            Every install starts the same way: a free in-home water test, and an honest
+            recommendation about what your home actually needs.
+          </p>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <a href="Book Free Water Test.html" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+              Book free water test <Icon name="arrow" size={14} />
+            </a>
+            <a href={WHS_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
+              Watch on Instagram <Icon name="arrow-ne" size={12} />
+            </a>
+          </div>
+        </div>
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <InstagramEmbed url={WHS_REEL_URL} />
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 // How we help you choose — non-technical process
 const WHSProcess = () => {
   const steps = [
@@ -345,4 +384,4 @@ const WHSCta = () => (
   </section>
 );
 
-Object.assign(window, { WHSHero, WHSOptions, WHSBenefits, WHSProcess, WHSFaq, WHSCta });
+Object.assign(window, { WHSHero, WHSOptions, WHSBenefits, WHSTestimonialReel, WHSProcess, WHSFaq, WHSCta });
