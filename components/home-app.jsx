@@ -4,9 +4,9 @@ const HomeApp = () => (
     <Nav />
     <main>
       <HomeHero />
+      <FeaturedReel />
       <HomeSystems />
       <HomeBenefits />
-      <FeaturedReel />
       <HomeService />
       <HomeServiceAreas />
       <FreeTestBanner />
