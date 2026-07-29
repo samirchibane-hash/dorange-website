@@ -4,8 +4,10 @@ const HomeApp = () => (
     <Nav />
     <main>
       <HomeHero />
-      <HomeCategories />
-      <BestSellers />
+      <HomeSystems />
+      <HomeBenefits />
+      <HomeService />
+      <HomeServiceAreas />
       <FreeTestBanner />
       <Testimonials />
     </main>
