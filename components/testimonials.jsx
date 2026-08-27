@@ -124,7 +124,7 @@ const FAQ = () => {
             <div className="eyebrow" style={{ marginBottom: 16 }}>// Questions</div>
             <h2 style={{ marginBottom: 20 }}>Straight answers.</h2>
             <p style={{ color: "var(--ink-2)", maxWidth: 320, marginBottom: 24 }}>
-              Still have a question? Call a real person at <strong>(239) 555-0199</strong> or email <strong>hello@dorangeservices.com</strong>.
+              Still have a question? Call a real person at <strong>(239) 399-2676</strong> or email <strong>hello@dorangeservices.com</strong>.
             </p>
           </div>
           <div>

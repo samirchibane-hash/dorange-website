@@ -98,6 +98,8 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 .btn-light:hover { background: #fff; box-shadow: var(--shadow-md); }
 .btn-dark { background: var(--ink); color: var(--paper); }
 .btn-dark:hover { background: #000; transform: translateY(-1px); }
+.btn-ghost-light { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.55); }
+.btn-ghost-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
 .btn-sm { padding: 10px 16px; font-size: 13px; }
 
 /* Badge */
@@ -136,7 +138,20 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 .grid-footer  { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 40px; }
 .grid-logos   { display: grid; grid-template-columns: repeat(6, 1fr); gap: 40px; align-items: center; }
 
-.hero-section    { padding-top: 140px; padding-bottom: 80px; position: relative; overflow: hidden; }
+.hero-section    { padding-top: 168px; padding-bottom: 80px; position: relative; overflow: hidden; }
+
+/* Nav logo — ~3x the mark it used to render at. It compacts on scroll so the
+   fixed bar doesn't hold that much of the viewport for the whole page.
+   Heights are on the trimmed asset (no baked-in whitespace), so the ink is
+   the full box height. */
+.nav-logo             { height: 100px; width: auto; display: block; transition: height .3s ease; }
+.nav-logo.is-compact  { height: 56px; }
+
+/* Dark scrim over a photo hero. Horizontal on desktop so the right-hand
+   visual keeps some of the photograph; flattened to a vertical wash on
+   mobile, where the copy runs the full width and would otherwise land on
+   the bright end of the ramp. */
+.hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(34,34,34,.88) 0%, rgba(34,34,34,.55) 55%, rgba(34,34,34,.25) 100%); }
 .testimonials-pad { padding: 64px 72px; }
 .sticky-sidebar  { position: sticky; }
 .nav-hamburger   { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border-radius: 8px; background: none; border: 0; cursor: pointer; color: var(--ink); }
@@ -147,6 +162,9 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 
 @media (max-width: 1024px) {
   .grid-hero { gap: 48px; }
+
+  .nav-logo            { height: 76px; }
+  .nav-logo.is-compact { height: 52px; }
 }
 
 @media (max-width: 767px) {
@@ -165,7 +183,12 @@ section { padding: clamp(72px, 9vw, 140px) 0; }
 
   .grid-logos   { grid-template-columns: repeat(3, 1fr); gap: 16px; }
 
-  .hero-section     { padding-top: 96px; padding-bottom: 48px; }
+  .hero-section     { padding-top: 116px; padding-bottom: 48px; }
+
+  .nav-logo            { height: 58px; }
+  .nav-logo.is-compact { height: 44px; }
+
+  .hero-scrim { background: linear-gradient(180deg, rgba(34,34,34,.88) 0%, rgba(34,34,34,.74) 100%); }
   .testimonials-pad { padding: 36px 24px; }
   .sticky-sidebar   { position: static; top: auto; }
 

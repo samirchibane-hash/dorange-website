@@ -70,8 +70,8 @@ const CalendarEmbed = () => {
             <p style={{ fontSize: 13, color: "var(--ink-3)" }}>
               Can&apos;t find a time that works? Call us directly.
             </p>
-            <a href="tel:+12395550199" className="btn btn-ghost btn-sm">
-              <Icon name="phone" size={12} /> (239) 555-0199
+            <a href="tel:+12393992676" className="btn btn-ghost btn-sm">
+              <Icon name="phone" size={12} /> (239) 399-2676
             </a>
           </div>
         </div>

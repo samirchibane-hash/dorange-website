@@ -61,7 +61,7 @@ const Contact = () => {
               </div>
               <div style={{ display: "grid", gap: 20, maxWidth: 380 }}>
                 <InfoRow icon="mail"  label="Email" value="hello@dorangeservices.com" />
-                <InfoRow icon="phone" label="Phone" value="(239) 555-0199" />
+                <InfoRow icon="phone" label="Phone" value="(239) 399-2676" />
                 <InfoRow icon="pin"   label="Office" value="1245 Tamiami Trail N · Naples, FL 34102" />
               </div>
             </div>
@@ -91,7 +91,7 @@ const Contact = () => {
                 </Field>
                 <Field label="Phone (optional)" error={errors.phone}>
                   <input type="tel" value={form.phone} onChange={update("phone")}
-                    placeholder="(239) 555-0199"
+                    placeholder="(239) 000-0000"
                     style={inputStyle(errors.phone)} />
                 </Field>
                 <Field label="Home ZIP">

@@ -33,12 +33,12 @@ const Hero = () => {
             }}>
               Book free water test <Icon name="arrow" size={14} />
             </a>
-            <a href="tel:+12395550199" className="btn" style={{
+            <a href="tel:+12393992676" className="btn" style={{
               padding: "16px 22px", fontSize: 15,
               border: "1px solid var(--rule)", background: "var(--paper)",
               color: "var(--ink)",
             }}>
-              <Icon name="phone" size={14} /> Call (239) 555-0199
+              <Icon name="phone" size={14} /> Call (239) 399-2676
             </a>
           </div>
           <p style={{ fontSize: 12, color: "var(--ink-3)", marginTop: 14 }}>

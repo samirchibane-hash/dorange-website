@@ -410,7 +410,7 @@ const ProductPageTemplate = ({ product }) => (
                 <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">
                   Enquire now <Icon name="arrow" size={14} />
                 </a>
-                <a href="tel:+12395550199" className="btn btn-ghost btn-sm">
+                <a href="tel:+12393992676" className="btn btn-ghost btn-sm">
                   <Icon name="phone" size={13} /> Call us
                 </a>
               </div>
@@ -476,8 +476,8 @@ const ProductPageTemplate = ({ product }) => (
               </p>
             </div>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-              <a href="tel:+12395550199" className="btn btn-dark">
-                <Icon name="phone" size={14} /> (239) 555-0199
+              <a href="tel:+12393992676" className="btn btn-dark">
+                <Icon name="phone" size={14} /> (239) 399-2676
               </a>
               <a href="/Book%20Free%20Water%20Test" className="btn btn-ghost">
                 Book an appointment

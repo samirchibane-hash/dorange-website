@@ -521,8 +521,8 @@ const CityLandingPage = ({ city }) => (
             <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">
               Book your free water test <Icon name="arrow" size={14} />
             </a>
-            <a href="tel:+12395550199" className="btn btn-ghost btn-sm">
-              <Icon name="phone" size={13} /> (239) 555-0199
+            <a href="tel:+12393992676" className="btn btn-ghost btn-sm">
+              <Icon name="phone" size={13} /> (239) 399-2676
             </a>
           </div>
         </div>

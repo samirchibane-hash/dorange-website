@@ -10,7 +10,7 @@ const HomeApp = () => (
       <HomeService />
       <HomeServiceAreas />
       <FreeTestBanner />
-      <CustomerReel />
+      <BreckaReel />
       <Testimonials />
     </main>
     <Footer />

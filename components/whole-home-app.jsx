@@ -1,7 +1,7 @@
 // Whole-Home System page root
 const WholeHomeApp = () => (
   <>
-    <Nav />
+    <Nav onDark />
     <main>
       <WHSHero />
       <WHSOptions />

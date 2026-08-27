@@ -1,5 +1,7 @@
-// Top navigation — sticky with scroll state
-const Nav = () => {
+// Top navigation — sticky with scroll state.
+// `onDark` is for pages whose hero sits on a dark image: links and CTAs
+// invert to light until the scrolled white background takes over.
+const Nav = ({ onDark = false }) => {
   const [scrolled, setScrolled] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(null);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -15,6 +17,8 @@ const Nav = () => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
+
+  const light = onDark && !scrolled;
 
   const links = [
     { label: "Home", href: "/", items: null },
@@ -52,7 +56,8 @@ const Nav = () => {
           padding: "14px 0",
         }}>
           <a href="/" style={{ display: "flex", alignItems: "center" }} aria-label="D'Orange Services — home">
-            <img src="assets/logo.png" alt="D'Orange Services" style={{ height: 40, width: "auto", display: "block" }} />
+            <img src="assets/logo-nav.png" alt="D'Orange Services"
+                 className={`nav-logo${scrolled ? " is-compact" : ""}`} />
           </a>
 
           {/* Desktop nav */}
@@ -67,7 +72,8 @@ const Nav = () => {
                   <ButtonTag
                     href={l.href}
                     style={{
-                      padding: "10px 14px", fontSize: 14, color: "var(--ink-2)",
+                      padding: "10px 14px", fontSize: 14,
+                      color: light ? "rgba(255,255,255,.92)" : "var(--ink-2)",
                       display: "inline-flex", alignItems: "center", gap: 6,
                       textDecoration: "none",
                     }}>
@@ -106,14 +112,17 @@ const Nav = () => {
 
           {/* Desktop CTAs */}
           <div className="nav-cta" style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <a href="tel:+12395550199" className="btn btn-sm" style={{ color: "var(--ink-2)" }}>
-              <Icon name="phone" size={12} /> (239) 555-0199
+            <a href="tel:+12393992676" className="btn btn-sm"
+               style={{ color: light ? "rgba(255,255,255,.92)" : "var(--ink-2)" }}>
+              <Icon name="phone" size={12} /> (239) 399-2676
             </a>
             <a href="/Book%20Free%20Water%20Test" className="btn btn-primary btn-sm">Free water test</a>
           </div>
 
           {/* Hamburger */}
-          <button className="nav-hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
+          <button className="nav-hamburger"
+                  style={{ color: light && !mobileOpen ? "#fff" : "var(--ink)" }}
+                  onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
             {mobileOpen
               ? <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l12 12M16 4L4 16"/></svg>
               : <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
@@ -131,7 +140,7 @@ const Nav = () => {
           display: "flex",
           flexDirection: "column",
         }}>
-          <div style={{ height: 72, flexShrink: 0 }} />
+          <div style={{ height: 92, flexShrink: 0 }} />
           <div style={{ flex: 1, padding: "24px 20px" }}>
             {links.map(l => (
               <div key={l.label} style={{ borderBottom: "1px solid var(--rule)" }}>
