@@ -1,23 +1,18 @@
 // Water Systems page — point-of-use vs point-of-entry options.
 // Intentionally non-technical: no stage counts, media names, or spec details.
 
-// Same install photograph and dark scrim the home page uses behind its
-// free-test banner, promoted here to a full-bleed hero backdrop.
-const WHS_HERO_IMAGE = "uploads/WhatsApp Image 2024-07-18 at 18.26.41.jpeg";
-
 const WHSHero = () => (
   <section className="hero-section" style={{ paddingBottom: 60 }}>
-    <img src={WHS_HERO_IMAGE} alt="" aria-hidden="true" style={{
-      position: "absolute", inset: 0, width: "100%", height: "100%",
-      objectFit: "cover", objectPosition: "center",
+    <div style={{
+      position: "absolute", inset: 0, pointerEvents: "none", opacity: .55,
+      background: "radial-gradient(ellipse 1100px 700px at 80% 10%, var(--orange-soft), transparent 60%)",
     }} />
-    <div className="hero-scrim" style={{ pointerEvents: "none" }} />
     <div className="container-wide grid-hero" style={{ position: "relative" }}>
       <div>
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 24 }}>
-          <a href="/Whole%20Home%20System" style={{ fontSize: 13, color: "rgba(255,255,255,.7)" }}>Water Systems</a>
-          <span style={{ color: "rgba(255,255,255,.45)" }}>/</span>
-          <span style={{ fontSize: 13, color: "rgba(255,255,255,.9)" }}>Point of use &amp; point of entry</span>
+          <a href="/Whole%20Home%20System" style={{ fontSize: 13, color: "var(--ink-3)" }}>Water Systems</a>
+          <span style={{ color: "var(--ink-4)" }}>/</span>
+          <span style={{ fontSize: 13, color: "var(--ink-2)" }}>Point of use &amp; point of entry</span>
         </div>
 
         <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 28, flexWrap: "wrap" }}>
@@ -27,23 +22,23 @@ const WHSHero = () => (
           <span className="badge">Whole-home &amp; single-tap</span>
         </div>
 
-        <h1 style={{ marginBottom: 24, color: "#fff" }}>
+        <h1 style={{ marginBottom: 24 }}>
           Cleaner water,<br/>
-          <span style={{ fontStyle: "italic" }}>every way you use it.</span>
+          <span style={{ fontStyle: "italic", color: "var(--orange)" }}>every way you use it.</span>
         </h1>
-        <p style={{ fontSize: 19, color: "rgba(255,255,255,.88)", maxWidth: 580, marginBottom: 32, lineHeight: 1.55 }}>
+        <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 580, marginBottom: 32, lineHeight: 1.55 }}>
           Whether you want better water at a single tap or throughout your entire home, we offer two
           kinds of systems — installed and tailored to your Florida water by certified local techs.
         </p>
 
         <div style={{ display: "flex", gap: 12, marginBottom: 48, flexWrap: "wrap" }}>
           <a href="/Book%20Free%20Water%20Test" className="btn btn-primary">Book free water test <Icon name="arrow" size={14} /></a>
-          <a href="#options" className="btn btn-ghost-light">Compare your options <Icon name="arrow" size={12} /></a>
+          <a href="#options" className="btn btn-ghost">Compare your options <Icon name="arrow" size={12} /></a>
         </div>
 
         <div style={{
           display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 0,
-          borderTop: "1px solid rgba(255,255,255,.22)", borderBottom: "1px solid rgba(255,255,255,.22)",
+          borderTop: "1px solid var(--rule)", borderBottom: "1px solid var(--rule)",
         }}>
           {[
             { n: "Two ways", l: "point of use or point of entry" },
@@ -52,11 +47,11 @@ const WHSHero = () => (
           ].map((s, i) => (
             <div key={s.l} style={{
               padding: "20px 16px 20px 0",
-              borderRight: i < 2 ? "1px solid rgba(255,255,255,.22)" : "none",
+              borderRight: i < 2 ? "1px solid var(--rule)" : "none",
               paddingLeft: i > 0 ? 16 : 0,
             }}>
-              <div style={{ fontFamily: "var(--f-display)", fontSize: 20, fontWeight: 600, lineHeight: 1, letterSpacing: "-0.02em", color: "#fff" }}>{s.n}</div>
-              <div style={{ fontSize: 12, color: "rgba(255,255,255,.65)", marginTop: 6 }}>{s.l}</div>
+              <div style={{ fontFamily: "var(--f-display)", fontSize: 20, fontWeight: 600, lineHeight: 1, letterSpacing: "-0.02em" }}>{s.n}</div>
+              <div style={{ fontSize: 12, color: "var(--ink-3)", marginTop: 6 }}>{s.l}</div>
             </div>
           ))}
         </div>
@@ -71,11 +66,12 @@ const WHSHeroVisual = () => (
   <div style={{ position: "relative" }}>
     <div style={{
       aspectRatio: "4/5", borderRadius: 24, overflow: "hidden", boxShadow: "var(--shadow-lg)",
-      background: "radial-gradient(120% 100% at 50% 0%, var(--bg-2), #FFFFFF 72%)",
-      padding: 36, display: "flex", alignItems: "center", justifyContent: "center",
     }}>
-      <img src="uploads/water-system-tanks.png" alt="D'Orange water systems in a range of sizes"
-        style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain", display: "block" }} />
+      {/* A real install rather than a product cutout, so it fills the frame:
+          cover, no inner padding, no lightbox gradient behind it. */}
+      <img src="uploads/WhatsApp Image 2024-07-18 at 18.26.41.jpeg"
+        alt="A D'Orange whole-home water system installed at a Southwest Florida home"
+        style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
     </div>
     <div className="hero-annotation"><div style={{
       position: "absolute", bottom: 24, left: -24, zIndex: 3,

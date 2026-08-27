@@ -1,7 +1,5 @@
-// Top navigation — sticky with scroll state.
-// `onDark` is for pages whose hero sits on a dark image: links and CTAs
-// invert to light until the scrolled white background takes over.
-const Nav = ({ onDark = false }) => {
+// Top navigation — sticky with scroll state
+const Nav = () => {
   const [scrolled, setScrolled] = React.useState(false);
   const [menuOpen, setMenuOpen] = React.useState(null);
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -17,8 +15,6 @@ const Nav = ({ onDark = false }) => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
-
-  const light = onDark && !scrolled;
 
   const links = [
     { label: "Home", href: "/", items: null },
@@ -72,8 +68,7 @@ const Nav = ({ onDark = false }) => {
                   <ButtonTag
                     href={l.href}
                     style={{
-                      padding: "10px 14px", fontSize: 14,
-                      color: light ? "rgba(255,255,255,.92)" : "var(--ink-2)",
+                      padding: "10px 14px", fontSize: 14, color: "var(--ink-2)",
                       display: "inline-flex", alignItems: "center", gap: 6,
                       textDecoration: "none",
                     }}>
@@ -112,17 +107,14 @@ const Nav = ({ onDark = false }) => {
 
           {/* Desktop CTAs */}
           <div className="nav-cta" style={{ display: "flex", gap: 8, alignItems: "center" }}>
-            <a href="tel:+12393992676" className="btn btn-sm"
-               style={{ color: light ? "rgba(255,255,255,.92)" : "var(--ink-2)" }}>
+            <a href="tel:+12393992676" className="btn btn-sm" style={{ color: "var(--ink-2)" }}>
               <Icon name="phone" size={12} /> (239) 399-2676
             </a>
             <a href="/Book%20Free%20Water%20Test" className="btn btn-primary btn-sm">Free water test</a>
           </div>
 
           {/* Hamburger */}
-          <button className="nav-hamburger"
-                  style={{ color: light && !mobileOpen ? "#fff" : "var(--ink)" }}
-                  onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
+          <button className="nav-hamburger" onClick={() => setMobileOpen(!mobileOpen)} aria-label={mobileOpen ? "Close menu" : "Open menu"}>
             {mobileOpen
               ? <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l12 12M16 4L4 16"/></svg>
               : <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 5h14M3 10h14M3 15h14"/></svg>
