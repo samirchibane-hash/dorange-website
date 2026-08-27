@@ -169,6 +169,47 @@ const AboutPage = () => (
 );
 
 // ─── How It Works ─────────────────────────────────────────
+// Same reel the city pages carry, angled at the test visit itself. Embed sits
+// left here so it doesn't read as a carbon copy of the city-page version, and
+// the section stays on paper to break the tint of <Process /> above it.
+const WATER_TEST_REEL_URL = "https://www.instagram.com/reel/DHtvOMLiQ7O/";
+
+const WaterTestReel = () => (
+  <section id="see-it">
+    <div className="container-wide">
+      <div className="grid-hero reel-row">
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <InstagramEmbed url={WATER_TEST_REEL_URL} />
+        </div>
+
+        <div>
+          <div className="eyebrow" style={{ marginBottom: 16 }}>// See it for yourself</div>
+          <h2 style={{ marginBottom: 20, maxWidth: 480 }}>
+            What the visit<br/>
+            <span style={{ fontStyle: "italic", color: "var(--orange)" }}>actually looks like.</span>
+          </h2>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 24, lineHeight: 1.6 }}>
+            A short look at the certified local crew who run every water test across Southwest
+            Florida — the same people who&apos;ll knock on your door.
+          </p>
+          <p style={{ color: "var(--ink-2)", fontSize: 17, maxWidth: 460, marginBottom: 32, lineHeight: 1.6 }}>
+            No lab drop-off and no waiting on results. We test at your kitchen tap and walk you
+            through the numbers before we leave.
+          </p>
+          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+            <a href="/Book%20Free%20Water%20Test" className="btn btn-primary" style={{ padding: "14px 22px" }}>
+              Book free water test <Icon name="arrow" size={14} />
+            </a>
+            <a href={WATER_TEST_REEL_URL} target="_blank" rel="noopener noreferrer" className="btn btn-ghost" style={{ padding: "14px 22px" }}>
+              Watch on Instagram <Icon name="arrow-ne" size={12} />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
 const HowItWorksPage = () => (
   <>
     <Nav />
@@ -197,6 +238,7 @@ const HowItWorksPage = () => (
       </section>
 
       <Process />
+      <WaterTestReel />
       <LifeWithIt />
 
       <section style={{ background: "var(--bg-2)" }}>
