@@ -98,12 +98,11 @@ const AboutPage = () => (
           </div>
           <div className="eyebrow" style={{ marginBottom: 16 }}>// About</div>
           <h1 style={{ maxWidth: 920, marginBottom: 24 }}>
-            A family-run water company<br/>
-            <span style={{ fontStyle: "italic", color: "var(--orange)" }}>built for Florida homes.</span>
+            More Than Our Business—<br/>
+            <span style={{ fontStyle: "italic", color: "var(--orange)" }}>Water Is Our Passion.</span>
           </h1>
           <p style={{ fontSize: 19, color: "var(--ink-2)", maxWidth: 660, lineHeight: 1.5 }}>
-            D&apos;Orange Services started in 2014 in a garage off Pine Ridge Road. A decade later, we&apos;re
-            still family-owned, still based in Naples, and still doing every install ourselves.
+            For over 23 years, I have worked on the front lines of the water purification industry, representing the most advanced filtration systems on the market.
           </p>
         </div>
       </section>
@@ -117,21 +116,28 @@ const AboutPage = () => (
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 28, fontSize: 17, color: "var(--ink-2)", maxWidth: 680, lineHeight: 1.55 }}>
               <p>
-                Naples water is a paradox — clean, regulated, and tested constantly, but
-                also some of the hardest, most chlorine-heavy water in the country. Most homeowners
-                here notice it in their dishes, their pipes, and their skin before they ever notice it
-                in their glass.
+                In two decades in this industry, I&apos;ve seen it all. I know what is mostly marketing hype, and I know what genuinely performs. The technology we represent is truly unique. It isn&apos;t like the ordinary filters on the market—it actually works.
               </p>
               <p>
-                Our founder started D&apos;Orange after his own family installed a system that didn&apos;t
-                fit their water. The company that sold it didn&apos;t test first — they sold the same system
-                to everyone. The result was a $4,000 unit that solved 30% of the problem.
+                After spending years seeing firsthand how this technology changes lives, I knew I had to take my commitment a step further. Bringing together my decades of field experience with the deep knowledge and vision of my wife, Fernanda, we became independent distributors and founded D&apos;Orange Services.
               </p>
               <p>
-                The principle from day one has been simple: <strong>test before you sell, install once,
-                stand behind it for life.</strong> Every D&apos;Orange tech is certified by the Water Quality
-                Association, and every customer gets the cell number of the tech who installed their system.
+                We don&apos;t just love this system for what it does—we love it for what it gives back to people. There is nothing quite like helping a family transform their daily health, or seeing the look on their faces the very first time they taste real, pure, clean water right from their own tap.
               </p>
+              <p>
+                Our purpose is simple: to help you and your family live a healthier, longer life, starting with the most essential element on earth—water.
+              </p>
+              <p>
+                This is more than our business. It&apos;s our passion.
+              </p>
+              <div style={{ paddingTop: 8, borderTop: "1px solid var(--rule)" }}>
+                <div style={{ fontFamily: "var(--f-display)", fontWeight: 600, fontSize: 18, color: "var(--ink)", letterSpacing: "-0.01em" }}>
+                  Fernanda Ospina &amp; Danny Gonzalez
+                </div>
+                <div style={{ fontSize: 14, color: "var(--ink-3)", marginTop: 6 }}>
+                  Founders, D&apos;Orange Services | Independent Distributors
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -153,8 +159,9 @@ const AboutPage = () => (
               <div key={s.l} style={{
                 background: "var(--paper)", border: "1px solid var(--rule)",
                 borderRadius: 20, padding: "32px 28px",
+                minWidth: 0,
               }}>
-                <div style={{ fontFamily: "var(--f-display)", fontSize: 48, lineHeight: 1, letterSpacing: "-0.02em" }}>{s.n}</div>
+                <div style={{ fontFamily: "var(--f-display)", fontSize: "clamp(32px, 9vw, 48px)", lineHeight: 1, letterSpacing: "-0.02em" }}>{s.n}</div>
                 <div style={{ fontSize: 13, color: "var(--ink-3)", marginTop: 10 }}>{s.l}</div>
               </div>
             ))}
